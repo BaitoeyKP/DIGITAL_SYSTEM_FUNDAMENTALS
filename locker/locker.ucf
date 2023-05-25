@@ -1,0 +1,12 @@
+
+
+NET "esp0_lsb" LOC = P133;
+NET "esp1" LOC = P131;
+NET "esp2_msb" LOC = P126;
+NET "k3_5_p140" LOC = P140;
+NET "k3_7_p138" LOC = P138;
+NET "k3_9_p134" LOC = P134;
+NET "k3_11_p132" LOC = P132;
+NET "k3_13_p127" LOC = P127;
+NET "k3_15_p124" LOC = P124;
+NET "osc_p123" LOC = P123;

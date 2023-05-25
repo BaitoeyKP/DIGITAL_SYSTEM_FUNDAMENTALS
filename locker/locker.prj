@@ -1,0 +1,4 @@
+vhdl work "DIVIDER.vhd"
+vhdl work "servo_1.vhd"
+verilog work "choose.vf"
+verilog work "locker.vf"

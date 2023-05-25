@@ -1,0 +1,17 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Dec 15 16:11:55 2022
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "esp0_lsb" LOCATE = SITE "P133" LEVEL 1;
+COMP "k3_11_p132" LOCATE = SITE "P132" LEVEL 1;
+COMP "k3_5_p140" LOCATE = SITE "P140" LEVEL 1;
+COMP "esp1" LOCATE = SITE "P131" LEVEL 1;
+COMP "osc_p123" LOCATE = SITE "P123" LEVEL 1;
+COMP "k3_15_p124" LOCATE = SITE "P124" LEVEL 1;
+COMP "esp2_msb" LOCATE = SITE "P126" LEVEL 1;
+COMP "k3_9_p134" LOCATE = SITE "P134" LEVEL 1;
+COMP "k3_13_p127" LOCATE = SITE "P127" LEVEL 1;
+COMP "k3_7_p138" LOCATE = SITE "P138" LEVEL 1;
+SCHEMATIC END;
+

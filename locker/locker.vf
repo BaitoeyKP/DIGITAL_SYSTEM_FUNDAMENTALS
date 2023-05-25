@@ -1,0 +1,154 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : locker.vf
+// /___/   /\     Timestamp : 12/15/2022 16:11:39
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog "E:/project/locker (use)/locker.vf" -w "E:/project/locker (use)/locker.sch"
+//Design Name: locker
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module choose_MUSER_locker(esp0, 
+                           esp1, 
+                           esp2_msb, 
+                           ch1, 
+                           ch2, 
+                           ch3, 
+                           ch4, 
+                           ch5, 
+                           ch6);
+
+    input esp0;
+    input esp1;
+    input esp2_msb;
+   output ch1;
+   output ch2;
+   output ch3;
+   output ch4;
+   output ch5;
+   output ch6;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   
+   AND3  XLXI_1 (.I0(esp0), 
+                .I1(XLXN_2), 
+                .I2(XLXN_1), 
+                .O(ch1));
+   AND3  XLXI_2 (.I0(XLXN_4), 
+                .I1(esp1), 
+                .I2(XLXN_3), 
+                .O(ch2));
+   AND3  XLXI_3 (.I0(esp0), 
+                .I1(esp1), 
+                .I2(XLXN_5), 
+                .O(ch3));
+   AND3  XLXI_4 (.I0(XLXN_7), 
+                .I1(XLXN_6), 
+                .I2(esp2_msb), 
+                .O(ch4));
+   AND3  XLXI_5 (.I0(esp0), 
+                .I1(XLXN_8), 
+                .I2(esp2_msb), 
+                .O(ch5));
+   AND3  XLXI_6 (.I0(XLXN_9), 
+                .I1(esp1), 
+                .I2(esp2_msb), 
+                .O(ch6));
+   INV  XLXI_7 (.I(esp2_msb), 
+               .O(XLXN_1));
+   INV  XLXI_8 (.I(esp1), 
+               .O(XLXN_2));
+   INV  XLXI_10 (.I(esp2_msb), 
+                .O(XLXN_3));
+   INV  XLXI_11 (.I(esp0), 
+                .O(XLXN_4));
+   INV  XLXI_12 (.I(esp2_msb), 
+                .O(XLXN_5));
+   INV  XLXI_13 (.I(esp1), 
+                .O(XLXN_6));
+   INV  XLXI_14 (.I(esp0), 
+                .O(XLXN_7));
+   INV  XLXI_15 (.I(esp1), 
+                .O(XLXN_8));
+   INV  XLXI_16 (.I(esp0), 
+                .O(XLXN_9));
+endmodule
+`timescale 1ns / 1ps
+
+module locker(esp0_lsb, 
+              esp1, 
+              esp2_msb, 
+              osc_p123, 
+              k3_5_p140, 
+              k3_7_p138, 
+              k3_9_p134, 
+              k3_11_p132, 
+              k3_13_p127, 
+              k3_15_p124);
+
+    input esp0_lsb;
+    input esp1;
+    input esp2_msb;
+    input osc_p123;
+   output k3_5_p140;
+   output k3_7_p138;
+   output k3_9_p134;
+   output k3_11_p132;
+   output k3_13_p127;
+   output k3_15_p124;
+   
+   wire XLXN_55;
+   wire XLXN_56;
+   wire XLXN_57;
+   wire XLXN_58;
+   wire XLXN_59;
+   wire XLXN_60;
+   
+   choose_MUSER_locker  XLXI_1 (.esp0(esp0_lsb), 
+                               .esp1(esp1), 
+                               .esp2_msb(esp2_msb), 
+                               .ch1(XLXN_55), 
+                               .ch2(XLXN_56), 
+                               .ch3(XLXN_57), 
+                               .ch4(XLXN_58), 
+                               .ch5(XLXN_59), 
+                               .ch6(XLXN_60));
+   servo_1  XLXI_11 (.clk(osc_p123), 
+                    .s(XLXN_55), 
+                    .Qpwm(k3_15_p124));
+   servo_1  XLXI_12 (.clk(osc_p123), 
+                    .s(XLXN_56), 
+                    .Qpwm(k3_13_p127));
+   servo_1  XLXI_13 (.clk(osc_p123), 
+                    .s(XLXN_57), 
+                    .Qpwm(k3_11_p132));
+   servo_1  XLXI_14 (.clk(osc_p123), 
+                    .s(XLXN_58), 
+                    .Qpwm(k3_9_p134));
+   servo_1  XLXI_15 (.clk(osc_p123), 
+                    .s(XLXN_59), 
+                    .Qpwm(k3_7_p138));
+   servo_1  XLXI_16 (.clk(osc_p123), 
+                    .s(XLXN_60), 
+                    .Qpwm(k3_5_p140));
+endmodule
