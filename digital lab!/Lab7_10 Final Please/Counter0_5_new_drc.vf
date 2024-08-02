@@ -1,0 +1,108 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Counter0_5_new_drc.vf
+// /___/   /\     Timestamp : 10/19/2022 19:59:25
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Users\nicha\Downloads\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family spartan6 -verilog Counter0_5_new_drc.vf -w C:/Users/nicha/Downloads/digital_lab/Lab7_10/Counter0_5_new.sch
+//Design Name: Counter0_5_new
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_Counter0_5_new(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module Counter0_5_new(Clear, 
+                      Inn, 
+                      Count, 
+                      TC);
+
+    input Clear;
+    input Inn;
+   output [3:0] Count;
+   output TC;
+   
+   wire XLXN_3;
+   wire XLXN_6;
+   wire XLXN_19;
+   wire [3:0] Count_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Count[3:0] = Count_DUMMY[3:0];
+   assign TC = TC_DUMMY;
+   (* HU_SET = "XLXI_1_0" *) 
+   FJKC_HXILINX_Counter0_5_new  XLXI_1 (.C(Inn), 
+                                       .CLR(XLXN_19), 
+                                       .J(XLXN_6), 
+                                       .K(XLXN_6), 
+                                       .Q(Count_DUMMY[2]));
+   (* HU_SET = "XLXI_2_1" *) 
+   FJKC_HXILINX_Counter0_5_new  XLXI_2 (.C(Inn), 
+                                       .CLR(XLXN_19), 
+                                       .J(Count_DUMMY[0]), 
+                                       .K(Count_DUMMY[0]), 
+                                       .Q(Count_DUMMY[1]));
+   (* HU_SET = "XLXI_3_2" *) 
+   FJKC_HXILINX_Counter0_5_new  XLXI_3 (.C(Inn), 
+                                       .CLR(XLXN_19), 
+                                       .J(XLXN_3), 
+                                       .K(XLXN_3), 
+                                       .Q(Count_DUMMY[0]));
+   VCC  XLXI_7 (.P(XLXN_3));
+   AND2  XLXI_8 (.I0(Count_DUMMY[1]), 
+                .I1(Count_DUMMY[0]), 
+                .O(XLXN_6));
+   AND3B1  XLXI_9 (.I0(Count_DUMMY[0]), 
+                  .I1(Count_DUMMY[1]), 
+                  .I2(Count_DUMMY[2]), 
+                  .O(TC_DUMMY));
+   OR2  XLXI_10 (.I0(Clear), 
+                .I1(TC_DUMMY), 
+                .O(XLXN_19));
+   GND  XLXI_11 (.G(Count_DUMMY[3]));
+endmodule

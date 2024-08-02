@@ -1,0 +1,2 @@
+sch2hdl -intstyle ise -family spartan6 -verilog ClockMM_SS_drc.vf -w C:/Users/nicha/Downloads/digital_lab/Lab7_10/ClockMM_SS.sch 
+sch2sym -intstyle ise -family spartan6 -refsym ClockMM_SS C:/Users/nicha/Downloads/digital_lab/Lab7_10/ClockMM_SS.sch C:/Users/nicha/Downloads/digital_lab/Lab7_10/ClockMM_SS.sym 

@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym decoder1_2_new E:/lab6/decoder1_2_new.sch E:/lab6/decoder1_2_new.sym 

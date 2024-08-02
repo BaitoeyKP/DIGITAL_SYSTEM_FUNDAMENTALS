@@ -1,0 +1,99 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml locker.twx locker.ncd -o locker.twr locker.pcf -ucf
+locker.ucf
+
+Design file:              locker.ncd
+Physical constraint file: locker.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock osc_p123
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+osc_p123       |    2.360|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+esp0_lsb       |a_p41          |    7.656|
+esp0_lsb       |b_p40          |    7.520|
+esp0_lsb       |c_p35          |    7.387|
+esp0_lsb       |d_p34          |    7.407|
+esp0_lsb       |e_p32          |    7.734|
+esp0_lsb       |f_p29          |    8.748|
+esp0_lsb       |g_p27          |    8.616|
+esp0_lsb       |k3_5_p140      |   14.677|
+esp0_lsb       |k3_7_p138      |   15.177|
+esp0_lsb       |k3_9_p134      |   13.999|
+esp0_lsb       |k3_11_p132     |   13.776|
+esp0_lsb       |k3_13_p127     |   13.674|
+esp0_lsb       |k3_15_p124     |   13.469|
+esp1           |a_p41          |    7.996|
+esp1           |b_p40          |    7.464|
+esp1           |c_p35          |    8.047|
+esp1           |d_p34          |    7.992|
+esp1           |e_p32          |    7.990|
+esp1           |f_p29          |    9.005|
+esp1           |g_p27          |    9.211|
+esp1           |k3_5_p140      |   15.635|
+esp1           |k3_7_p138      |   15.623|
+esp1           |k3_9_p134      |   14.512|
+esp1           |k3_11_p132     |   14.276|
+esp1           |k3_13_p127     |   13.954|
+esp1           |k3_15_p124     |   13.872|
+esp2_msb       |a_p41          |    7.493|
+esp2_msb       |b_p40          |    7.319|
+esp2_msb       |c_p35          |    7.521|
+esp2_msb       |d_p34          |    7.447|
+esp2_msb       |e_p32          |    7.766|
+esp2_msb       |f_p29          |    8.624|
+esp2_msb       |g_p27          |    8.712|
+esp2_msb       |k3_5_p140      |   12.176|
+esp2_msb       |k3_7_p138      |   12.308|
+esp2_msb       |k3_9_p134      |   12.959|
+esp2_msb       |k3_11_p132     |   12.114|
+esp2_msb       |k3_13_p127     |   14.261|
+esp2_msb       |k3_15_p124     |   12.985|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Dec 13 10:01:57 2022 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4571 MB
+
+
+

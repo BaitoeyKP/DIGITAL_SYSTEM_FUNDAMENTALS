@@ -1,0 +1,2 @@
+sch2hdl -intstyle ise -family spartan6 -verilog Display_1_drc.vf -w C:/Users/nicha/Downloads/digital_lab/Lab7_10/Display_1.sch 
+sch2sym -intstyle ise -family spartan6 -refsym Display_1 C:/Users/nicha/Downloads/digital_lab/Lab7_10/Display_1.sch C:/Users/nicha/Downloads/digital_lab/Lab7_10/Display_1.sym 

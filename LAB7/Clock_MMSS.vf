@@ -1,0 +1,229 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Clock_MMSS.vf
+// /___/   /\     Timestamp : 11/21/2021 20:22:24
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/Users/beaut/Desktop/flie/LAB7/Clock_MMSS.vf -w C:/Users/beaut/Desktop/flie/LAB7/Clock_MMSS.sch
+//Design Name: Clock_MMSS
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module MinuteCounter_MUSER_Clock_MMSS(CLKIN, 
+                                      RST, 
+                                      M1, 
+                                      M2, 
+                                      OUTM);
+
+    input CLKIN;
+    input RST;
+   output [3:0] M1;
+   output [3:0] M2;
+   output OUTM;
+   
+   wire CLKOUT;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_12;
+   wire XLXN_24;
+   wire XLXN_28;
+   wire XLXN_29;
+   wire XLXN_31;
+   wire XLXN_32;
+   wire XLXN_33;
+   wire OUTM_DUMMY;
+   wire [3:0] M1_DUMMY;
+   wire [3:0] M2_DUMMY;
+   
+   assign M1[3:0] = M1_DUMMY[3:0];
+   assign M2[3:0] = M2_DUMMY[3:0];
+   assign OUTM = OUTM_DUMMY;
+   FDC  XLXI_1 (.C(XLXN_12), 
+               .CLR(XLXN_31), 
+               .D(XLXN_5), 
+               .Q(M1_DUMMY[1]));
+   FDC  XLXI_2 (.C(XLXN_5), 
+               .CLR(XLXN_31), 
+               .D(XLXN_6), 
+               .Q(M1_DUMMY[2]));
+   FDC  XLXI_3 (.C(XLXN_6), 
+               .CLR(XLXN_31), 
+               .D(CLKOUT), 
+               .Q(M1_DUMMY[3]));
+   INV  XLXI_4 (.I(M1_DUMMY[0]), 
+               .O(XLXN_12));
+   INV  XLXI_5 (.I(M1_DUMMY[1]), 
+               .O(XLXN_5));
+   INV  XLXI_6 (.I(M1_DUMMY[2]), 
+               .O(XLXN_6));
+   INV  XLXI_7 (.I(M1_DUMMY[3]), 
+               .O(CLKOUT));
+   FDC  XLXI_8 (.C(CLKIN), 
+               .CLR(XLXN_31), 
+               .D(XLXN_12), 
+               .Q(M1_DUMMY[0]));
+   AND2  XLXI_9 (.I0(M1_DUMMY[3]), 
+                .I1(M1_DUMMY[1]), 
+                .O(XLXN_33));
+   FDC  XLXI_10 (.C(XLXN_28), 
+                .CLR(XLXN_29), 
+                .D(XLXN_24), 
+                .Q(M2_DUMMY[1]));
+   FDC  XLXI_11 (.C(XLXN_24), 
+                .CLR(XLXN_29), 
+                .D(XLXN_7), 
+                .Q(M2_DUMMY[2]));
+   FDC  XLXI_12 (.C(XLXN_7), 
+                .CLR(XLXN_29), 
+                .D(OUTM_DUMMY), 
+                .Q(M2_DUMMY[3]));
+   INV  XLXI_13 (.I(M2_DUMMY[0]), 
+                .O(XLXN_28));
+   INV  XLXI_14 (.I(M2_DUMMY[1]), 
+                .O(XLXN_24));
+   INV  XLXI_15 (.I(M2_DUMMY[2]), 
+                .O(XLXN_7));
+   INV  XLXI_16 (.I(M2_DUMMY[3]), 
+                .O(OUTM_DUMMY));
+   FDC  XLXI_17 (.C(CLKOUT), 
+                .CLR(XLXN_29), 
+                .D(XLXN_28), 
+                .Q(M2_DUMMY[0]));
+   AND2  XLXI_18 (.I0(M2_DUMMY[3]), 
+                 .I1(M2_DUMMY[1]), 
+                 .O(XLXN_32));
+   OR2  XLXI_19 (.I0(XLXN_32), 
+                .I1(RST), 
+                .O(XLXN_29));
+   OR2  XLXI_20 (.I0(XLXN_33), 
+                .I1(RST), 
+                .O(XLXN_31));
+endmodule
+`timescale 1ns / 1ps
+
+module SecondCounter_MUSER_Clock_MMSS(CLKIN, 
+                                      RST, 
+                                      BIT, 
+                                      MIN, 
+                                      OUTS);
+
+    input CLKIN;
+    input RST;
+   output [3:0] BIT;
+   output [3:0] MIN;
+   output OUTS;
+   
+   wire CLKOUT;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_9;
+   wire XLXN_13;
+   wire XLXN_33;
+   wire XLXN_36;
+   wire XLXN_44;
+   wire XLXN_46;
+   wire XLXN_47;
+   wire OUTS_DUMMY;
+   wire [3:0] BIT_DUMMY;
+   wire [3:0] MIN_DUMMY;
+   
+   assign BIT[3:0] = BIT_DUMMY[3:0];
+   assign MIN[3:0] = MIN_DUMMY[3:0];
+   assign OUTS = OUTS_DUMMY;
+   FDC  XLXI_1 (.C(XLXN_9), 
+               .CLR(XLXN_13), 
+               .D(XLXN_6), 
+               .Q(BIT_DUMMY[2]));
+   INV  XLXI_2 (.I(BIT_DUMMY[0]), 
+               .O(XLXN_7));
+   INV  XLXI_3 (.I(BIT_DUMMY[1]), 
+               .O(XLXN_9));
+   INV  XLXI_4 (.I(BIT_DUMMY[3]), 
+               .O(CLKOUT));
+   FDC  XLXI_5 (.C(CLKIN), 
+               .CLR(XLXN_13), 
+               .D(XLXN_7), 
+               .Q(BIT_DUMMY[0]));
+   AND2  XLXI_6 (.I0(BIT_DUMMY[3]), 
+                .I1(BIT_DUMMY[1]), 
+                .O(XLXN_46));
+   FDC  XLXI_7 (.C(XLXN_7), 
+               .CLR(XLXN_13), 
+               .D(XLXN_9), 
+               .Q(BIT_DUMMY[1]));
+   INV  XLXI_8 (.I(BIT_DUMMY[2]), 
+               .O(XLXN_6));
+   FDC  XLXI_9 (.C(XLXN_6), 
+               .CLR(XLXN_13), 
+               .D(CLKOUT), 
+               .Q(BIT_DUMMY[3]));
+   FDC  XLXI_10 (.C(CLKOUT), 
+                .CLR(XLXN_44), 
+                .D(XLXN_36), 
+                .Q(MIN_DUMMY[0]));
+   FDC  XLXI_11 (.C(XLXN_36), 
+                .CLR(XLXN_44), 
+                .D(XLXN_33), 
+                .Q(MIN_DUMMY[1]));
+   INV  XLXI_12 (.I(MIN_DUMMY[0]), 
+                .O(XLXN_36));
+   INV  XLXI_13 (.I(MIN_DUMMY[1]), 
+                .O(XLXN_33));
+   INV  XLXI_14 (.I(MIN_DUMMY[2]), 
+                .O(OUTS_DUMMY));
+   FDC  XLXI_15 (.C(XLXN_33), 
+                .CLR(XLXN_44), 
+                .D(OUTS_DUMMY), 
+                .Q(MIN_DUMMY[2]));
+   AND2  XLXI_16 (.I0(MIN_DUMMY[1]), 
+                 .I1(MIN_DUMMY[2]), 
+                 .O(XLXN_47));
+   GND  XLXI_87 (.G(MIN_DUMMY[3]));
+   OR2  XLXI_88 (.I0(XLXN_47), 
+                .I1(RST), 
+                .O(XLXN_44));
+   OR2  XLXI_89 (.I0(XLXN_46), 
+                .I1(RST), 
+                .O(XLXN_13));
+endmodule
+`timescale 1ns / 1ps
+
+module Clock_MMSS(CLK, 
+                  RESET, 
+                  MM1, 
+                  MM2, 
+                  SS1, 
+                  SS2);
+
+    input CLK;
+    input RESET;
+   output [3:0] MM1;
+   output [3:0] MM2;
+   output [3:0] SS1;
+   output [3:0] SS2;
+   
+   wire XLXN_1;
+   
+   SecondCounter_MUSER_Clock_MMSS  XLXI_3 (.CLKIN(CLK), 
+                                          .RST(RESET), 
+                                          .BIT(SS1[3:0]), 
+                                          .MIN(SS2[3:0]), 
+                                          .OUTS(XLXN_1));
+   MinuteCounter_MUSER_Clock_MMSS  XLXI_4 (.CLKIN(XLXN_1), 
+                                          .RST(RESET), 
+                                          .M1(MM1[3:0]), 
+                                          .M2(MM2[3:0]), 
+                                          .OUTM());
+endmodule

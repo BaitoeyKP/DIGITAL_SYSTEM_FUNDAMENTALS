@@ -1,0 +1,85 @@
+
+****** PlanAhead v14.7
+  **** Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source E:/JK_LAB5/pa.fromHdl.tcl
+# create_project -name JK_LAB5 -dir "E:/JK_LAB5/planAhead_run_1" -part xc6slx9tqg144-3
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "E:/JK_LAB5/JKpin.ucf" [current_fileset -constrset]
+Adding file 'E:/JK_LAB5/JKpin.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {JK.vf}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set_property top JK $srcset
+# add_files [list {JKpin.ucf}] -fileset [get_property constrset [current_run]]
+# add_files [list {JK.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx9tqg144-3
+Using Verific elaboration
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Analyzing Verilog file "E:/JK_LAB5/JK.vf" into library work
+Loading clock regions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockBuffers.xml
+Loading package pin functions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/tqg144/Package.xml
+Loading io standards from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [E:/JK_LAB5/JKpin.ucf]
+Finished Parsing UCF File [E:/JK_LAB5/JKpin.ucf]
+Parsing UCF File [E:/JK_LAB5/JK.ucf]
+Finished Parsing UCF File [E:/JK_LAB5/JK.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 95d2ab4a
+open_rtl_design: Time (s): elapsed = 00:00:06 . Memory (MB): peak = 589.602 ; gain = 102.793
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P41 [get_ports a_P41]
+endgroup
+startgroup
+set_property package_pin P66 [get_ports A_SW0_P66]
+endgroup
+startgroup
+set_property package_pin P40 [get_ports b_P40]
+endgroup
+startgroup
+set_property package_pin P62 [get_ports B_SW1_P62]
+endgroup
+startgroup
+set_property package_pin P35 [get_ports c_P35]
+endgroup
+startgroup
+set_property package_pin P61 [get_ports C_SW2_P61]
+endgroup
+startgroup
+set_property package_pin P70 [get_ports CLK_P70]
+endgroup
+startgroup
+set_property package_pin P34 [get_ports d_P34]
+endgroup
+startgroup
+set_property package_pin P59 [get_ports D_SW3_P59]
+endgroup
+startgroup
+set_property package_pin P32 [get_ports e_P32]
+endgroup
+startgroup
+set_property package_pin P29 [get_ports f_P29]
+endgroup
+startgroup
+set_property package_pin P27 [get_ports g_P27]
+endgroup
+save_constraints
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Fri Sep 30 21:30:13 2022...
+INFO: [Common 17-83] Releasing license: PlanAhead

@@ -1,0 +1,138 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : counter0_9TC.vf
+// /___/   /\     Timestamp : 10/09/2022 10:58:44
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/lab6/counter0_9TC.vf -w E:/lab6/counter0_9TC.sch
+//Design Name: counter0_9TC
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_counter0_9TC(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module counter0_9TC(clk, 
+                    A_count, 
+                    B_count, 
+                    C_count, 
+                    D_count, 
+                    TC);
+
+    input clk;
+   output A_count;
+   output B_count;
+   output C_count;
+   output D_count;
+   output TC;
+   
+   wire XLXN_1;
+   wire XLXN_5;
+   wire XLXN_7;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_17;
+   wire XLXN_22;
+   wire XLXN_23;
+   wire A_count_DUMMY;
+   wire D_count_DUMMY;
+   wire C_count_DUMMY;
+   wire B_count_DUMMY;
+   
+   assign A_count = A_count_DUMMY;
+   assign B_count = B_count_DUMMY;
+   assign C_count = C_count_DUMMY;
+   assign D_count = D_count_DUMMY;
+   (* HU_SET = "XLXI_1_0" *) 
+   FJKC_HXILINX_counter0_9TC  XLXI_1 (.C(clk), 
+                                     .CLR(XLXN_17), 
+                                     .J(XLXN_7), 
+                                     .K(A_count_DUMMY), 
+                                     .Q(D_count_DUMMY));
+   (* HU_SET = "XLXI_2_1" *) 
+   FJKC_HXILINX_counter0_9TC  XLXI_2 (.C(clk), 
+                                     .CLR(XLXN_17), 
+                                     .J(XLXN_5), 
+                                     .K(XLXN_5), 
+                                     .Q(C_count_DUMMY));
+   (* HU_SET = "XLXI_3_2" *) 
+   FJKC_HXILINX_counter0_9TC  XLXI_3 (.C(clk), 
+                                     .CLR(XLXN_17), 
+                                     .J(XLXN_12), 
+                                     .K(A_count_DUMMY), 
+                                     .Q(B_count_DUMMY));
+   (* HU_SET = "XLXI_4_3" *) 
+   FJKC_HXILINX_counter0_9TC  XLXI_4 (.C(clk), 
+                                     .CLR(XLXN_17), 
+                                     .J(XLXN_1), 
+                                     .K(XLXN_1), 
+                                     .Q(A_count_DUMMY));
+   VCC  XLXI_5 (.P(XLXN_1));
+   AND2  XLXI_6 (.I0(A_count_DUMMY), 
+                .I1(B_count_DUMMY), 
+                .O(XLXN_5));
+   AND3  XLXI_7 (.I0(A_count_DUMMY), 
+                .I1(B_count_DUMMY), 
+                .I2(C_count_DUMMY), 
+                .O(XLXN_7));
+   AND2  XLXI_8 (.I0(A_count_DUMMY), 
+                .I1(XLXN_13), 
+                .O(XLXN_12));
+   INV  XLXI_9 (.I(D_count_DUMMY), 
+               .O(XLXN_13));
+   GND  XLXI_10 (.G(XLXN_17));
+   AND4  XLXI_11 (.I0(D_count_DUMMY), 
+                 .I1(XLXN_23), 
+                 .I2(XLXN_22), 
+                 .I3(A_count_DUMMY), 
+                 .O(TC));
+   INV  XLXI_13 (.I(B_count_DUMMY), 
+                .O(XLXN_22));
+   INV  XLXI_14 (.I(C_count_DUMMY), 
+                .O(XLXN_23));
+endmodule

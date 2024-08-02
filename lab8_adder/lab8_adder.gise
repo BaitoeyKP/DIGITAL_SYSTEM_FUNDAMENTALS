@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="lab8_adder.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="MUX4_1.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="MUX4_1.vf"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="lab8Adder.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="lab8Adder.cmd_log"/>
+    <file xil_pn:fileType="FILE_JHD" xil_pn:name="lab8Adder.jhd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="lab8Adder.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="lab8Adder.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="lab8Adder.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="lab8Adder.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="lab8Adder.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="lab8Adder.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="lab8Adder.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="lab8Adder.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="lab8Adder.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="lab8Adder.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="lab8Adder.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="lab8Adder.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="lab8Adder.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="lab8Adder.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="lab8Adder.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="lab8Adder.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="lab8Adder.vf"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="lab8Adder.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="lab8Adder.xst"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="lab8Adder_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="lab8Adder_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="lab8Adder_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="lab8Adder_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="lab8Adder_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="lab8Adder_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="lab8Adder_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="lab8Adder_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="lab8Adder_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="lab8Adder_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="lab8Adder_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="lab8Adder_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="lab8Adder_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="lab8Adder_xst.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="lab8adder.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="lab8adder.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="lab8adder.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="mux8to4.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="mux8to4.vf"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_1"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_2"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="segment.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="segment.vf"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1666508558" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1666508558">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1666509320" xil_pn:in_ck="-1305618652845732815" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-7259449212555177227" xil_pn:start_ts="1666509317">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="MUX4_1.vf"/>
+      <outfile xil_pn:name="lab8Adder.vf"/>
+      <outfile xil_pn:name="mux8to4.vf"/>
+      <outfile xil_pn:name="segment.vf"/>
+    </transform>
+    <transform xil_pn:end_ts="1666508561" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="4892330250998586124" xil_pn:start_ts="1666508561">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1666508561" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1666508561">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1666508561" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="5007055033213329079" xil_pn:start_ts="1666508561">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1666508780" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="250970745955965653" xil_pn:start_ts="1666508780">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1666508780" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="6835548366075410454" xil_pn:start_ts="1666508780">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1666509324" xil_pn:in_ck="7641298684886470505" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-2290931971003344268" xil_pn:start_ts="1666509320">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="lab8Adder.jhd"/>
+      <outfile xil_pn:name="lab8Adder.lso"/>
+      <outfile xil_pn:name="lab8Adder.ngc"/>
+      <outfile xil_pn:name="lab8Adder.ngr"/>
+      <outfile xil_pn:name="lab8Adder.prj"/>
+      <outfile xil_pn:name="lab8Adder.stx"/>
+      <outfile xil_pn:name="lab8Adder.syr"/>
+      <outfile xil_pn:name="lab8Adder.xst"/>
+      <outfile xil_pn:name="lab8Adder_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1666509205" xil_pn:in_ck="720000804981720083" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-8119198863010149879" xil_pn:start_ts="1666509205">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1666509328" xil_pn:in_ck="768034725617487872" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6622941941778675085" xil_pn:start_ts="1666509324">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="lab8Adder.bld"/>
+      <outfile xil_pn:name="lab8Adder.ngd"/>
+      <outfile xil_pn:name="lab8Adder_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1666509333" xil_pn:in_ck="468156497937336737" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="6093601622908603872" xil_pn:start_ts="1666509328">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="lab8Adder.pcf"/>
+      <outfile xil_pn:name="lab8Adder_map.map"/>
+      <outfile xil_pn:name="lab8Adder_map.mrp"/>
+      <outfile xil_pn:name="lab8Adder_map.ncd"/>
+      <outfile xil_pn:name="lab8Adder_map.ngm"/>
+      <outfile xil_pn:name="lab8Adder_map.xrpt"/>
+      <outfile xil_pn:name="lab8Adder_summary.xml"/>
+      <outfile xil_pn:name="lab8Adder_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1666509341" xil_pn:in_ck="-5085114754631403174" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-6780099238861732004" xil_pn:start_ts="1666509333">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="lab8Adder.ncd"/>
+      <outfile xil_pn:name="lab8Adder.pad"/>
+      <outfile xil_pn:name="lab8Adder.par"/>
+      <outfile xil_pn:name="lab8Adder.ptwx"/>
+      <outfile xil_pn:name="lab8Adder.unroutes"/>
+      <outfile xil_pn:name="lab8Adder.xpi"/>
+      <outfile xil_pn:name="lab8Adder_pad.csv"/>
+      <outfile xil_pn:name="lab8Adder_pad.txt"/>
+      <outfile xil_pn:name="lab8Adder_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1666509348" xil_pn:in_ck="720000804981712458" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1666509341">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="lab8Adder.ut"/>
+      <outfile xil_pn:name="lab8adder.bgn"/>
+      <outfile xil_pn:name="lab8adder.bit"/>
+      <outfile xil_pn:name="lab8adder.drc"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1666509341" xil_pn:in_ck="3158594404298183325" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1666509338">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="lab8Adder.twr"/>
+      <outfile xil_pn:name="lab8Adder.twx"/>
+    </transform>
+  </transforms>
+
+</generated_project>

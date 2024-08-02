@@ -1,0 +1,2 @@
+sch2hdl -intstyle ise -family spartan6 -verilog BCDto7Seg_new_drc.vf -w C:/Users/nicha/Downloads/digital_lab/Lab7_10/BCDto7Seg_new.sch 
+sch2sym -intstyle ise -family spartan6 -refsym BCDto7Seg_new C:/Users/nicha/Downloads/digital_lab/Lab7_10/BCDto7Seg_new.sch C:/Users/nicha/Downloads/digital_lab/Lab7_10/BCDto7Seg_new.sym 

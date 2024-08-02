@@ -1,0 +1,3 @@
+MODULE Controller
+	SUBMODULE Divisor_20M
+		INSTANCE XLXI_7

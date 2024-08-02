@@ -1,0 +1,50 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : CommonAll_drc.vf
+// /___/   /\     Timestamp : 10/20/2022 12:54:02
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Users\nicha\Downloads\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family spartan6 -verilog CommonAll_drc.vf -w C:/Users/nicha/Downloads/digital_lab/Lab7_10/CommonAll.sch
+//Design Name: CommonAll
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module CommonAll(Inn, 
+                 Common0, 
+                 Common1, 
+                 Common2, 
+                 Common3);
+
+    input [3:0] Inn;
+   output Common0;
+   output Common1;
+   output Common2;
+   output Common3;
+   
+   wire XLXN_5;
+   
+   OR2  XLXI_1 (.I0(XLXN_5), 
+               .I1(Inn[0]), 
+               .O(Common0));
+   OR2  XLXI_2 (.I0(XLXN_5), 
+               .I1(Inn[1]), 
+               .O(Common1));
+   OR2  XLXI_3 (.I0(XLXN_5), 
+               .I1(Inn[2]), 
+               .O(Common2));
+   OR2  XLXI_4 (.I0(XLXN_5), 
+               .I1(Inn[3]), 
+               .O(Common3));
+   GND  XLXI_5 (.G(XLXN_5));
+endmodule

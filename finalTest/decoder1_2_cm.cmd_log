@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym decoder1_2_cm E:/USE/finalTest/decoder1_2_cm.sch E:/USE/finalTest/decoder1_2_cm.sym 

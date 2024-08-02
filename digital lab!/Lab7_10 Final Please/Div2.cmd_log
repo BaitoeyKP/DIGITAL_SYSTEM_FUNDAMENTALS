@@ -1,0 +1,2 @@
+sch2hdl -intstyle ise -family spartan6 -verilog Div2_drc.vf -w C:/Users/nicha/Downloads/digital_lab/Lab7_10/Div2.sch 
+sch2sym -intstyle ise -family spartan6 -refsym Div2 C:/Users/nicha/Downloads/digital_lab/Lab7_10/Div2.sch C:/Users/nicha/Downloads/digital_lab/Lab7_10/Div2.sym 

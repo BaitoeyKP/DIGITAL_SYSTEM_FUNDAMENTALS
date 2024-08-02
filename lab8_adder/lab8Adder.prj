@@ -1,0 +1,4 @@
+verilog work "mux8to4.vf"
+verilog work "segment.vf"
+verilog work "MUX4_1.vf"
+verilog work "lab8Adder.vf"

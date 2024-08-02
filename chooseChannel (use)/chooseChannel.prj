@@ -1,0 +1,3 @@
+verilog work "segment.vf"
+verilog work "counter1_6.vf"
+verilog work "chooseChannel.vf"

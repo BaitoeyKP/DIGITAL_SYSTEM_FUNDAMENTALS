@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan6 -refsym Divisor_20M E:/lab7_new/Divisor_20M.sch E:/lab7_new/Divisor_20M.sym 
+sch2sym -intstyle ise -family spartan6 -refsym Divisor_20M E:/lab7_new/Divisor_20M.sch E:/lab7_new/Divisor_20M.sym 

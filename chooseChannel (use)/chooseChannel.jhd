@@ -1,0 +1,5 @@
+MODULE chooseChannel
+	SUBMODULE segment
+		INSTANCE XLXI_2
+	SUBMODULE counter1_6
+		INSTANCE XLXI_17

@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan6 -refsym MUX4_1 E:/lab8_adder/MUX4_1.sch E:/lab8_adder/MUX4_1.sym 
+sch2sym -intstyle ise -family spartan6 -refsym MUX4_1 E:/lab8/MUX4_1.sch E:/lab8/MUX4_1.sym 

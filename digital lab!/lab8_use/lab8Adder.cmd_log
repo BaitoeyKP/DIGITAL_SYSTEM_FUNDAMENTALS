@@ -1,0 +1,30 @@
+xst -intstyle ise -ifn "E:/lab8_adder/lab8Adder.xst" -ofn "E:/lab8_adder/lab8Adder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab8Adder.ucf -p xc6slx9-tqg144-3 lab8Adder.ngc lab8Adder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o lab8Adder_map.ncd lab8Adder.ngd lab8Adder.pcf 
+par -w -intstyle ise -ol high -mt off lab8Adder_map.ncd lab8Adder.ncd lab8Adder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab8Adder.twx lab8Adder.ncd -o lab8Adder.twr lab8Adder.pcf -ucf lab8Adder.ucf 
+bitgen -intstyle ise -f lab8Adder.ut lab8Adder.ncd 
+xst -intstyle ise -ifn "E:/lab8_adder/lab8Adder.xst" -ofn "E:/lab8_adder/lab8Adder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab8Adder.ucf -p xc6slx9-tqg144-3 lab8Adder.ngc lab8Adder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o lab8Adder_map.ncd lab8Adder.ngd lab8Adder.pcf 
+par -w -intstyle ise -ol high -mt off lab8Adder_map.ncd lab8Adder.ncd lab8Adder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab8Adder.twx lab8Adder.ncd -o lab8Adder.twr lab8Adder.pcf -ucf lab8Adder.ucf 
+bitgen -intstyle ise -f lab8Adder.ut lab8Adder.ncd 
+xst -intstyle ise -ifn "E:/lab8_adder/lab8Adder.xst" -ofn "E:/lab8_adder/lab8Adder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab8Adder.ucf -p xc6slx9-tqg144-3 lab8Adder.ngc lab8Adder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o lab8Adder_map.ncd lab8Adder.ngd lab8Adder.pcf 
+par -w -intstyle ise -ol high -mt off lab8Adder_map.ncd lab8Adder.ncd lab8Adder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab8Adder.twx lab8Adder.ncd -o lab8Adder.twr lab8Adder.pcf -ucf lab8Adder.ucf 
+bitgen -intstyle ise -f lab8Adder.ut lab8Adder.ncd 
+xst -intstyle ise -ifn "E:/lab8/lab8Adder.xst" -ofn "E:/lab8/lab8Adder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab8Adder.ucf -p xc6slx9-tqg144-3 lab8Adder.ngc lab8Adder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o lab8Adder_map.ncd lab8Adder.ngd lab8Adder.pcf 
+par -w -intstyle ise -ol high -mt off lab8Adder_map.ncd lab8Adder.ncd lab8Adder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab8Adder.twx lab8Adder.ncd -o lab8Adder.twr lab8Adder.pcf -ucf lab8Adder.ucf 
+bitgen -intstyle ise -f lab8Adder.ut lab8Adder.ncd 
+xst -intstyle ise -ifn "E:/lab8/lab8Adder.xst" -ofn "E:/lab8/lab8Adder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab8Adder.ucf -p xc6slx9-tqg144-3 lab8Adder.ngc lab8Adder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o lab8Adder_map.ncd lab8Adder.ngd lab8Adder.pcf 
+par -w -intstyle ise -ol high -mt off lab8Adder_map.ncd lab8Adder.ncd lab8Adder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab8Adder.twx lab8Adder.ncd -o lab8Adder.twr lab8Adder.pcf -ucf lab8Adder.ucf 
+bitgen -intstyle ise -f lab8Adder.ut lab8Adder.ncd 

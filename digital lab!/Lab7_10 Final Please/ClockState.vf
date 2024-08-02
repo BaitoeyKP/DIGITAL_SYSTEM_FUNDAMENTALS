@@ -1,0 +1,100 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : ClockState.vf
+// /___/   /\     Timestamp : 10/19/2022 23:44:51
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/Users/nicha/Downloads/digital_lab/Lab7_10/ClockState.vf -w C:/Users/nicha/Downloads/digital_lab/Lab7_10/ClockState.sch
+//Design Name: ClockState
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_ClockState(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module ClockState(OSC, 
+                  ResetButton, 
+                  StartStopButton, 
+                  Dot, 
+                  Outt, 
+                  Reset);
+
+    input OSC;
+    input ResetButton;
+    input StartStopButton;
+   output Dot;
+   output Outt;
+   output Reset;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_6;
+   wire XLXN_14;
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   FJKC_HXILINX_ClockState  XLXI_1 (.C(XLXN_2), 
+                                   .CLR(XLXN_6), 
+                                   .J(XLXN_1), 
+                                   .K(XLXN_1), 
+                                   .Q(XLXN_14));
+   VCC  XLXI_3 (.P(XLXN_1));
+   AND2  XLXI_4 (.I0(StartStopButton), 
+                .I1(XLXN_3), 
+                .O(XLXN_2));
+   VCC  XLXI_5 (.P(XLXN_3));
+   GND  XLXI_6 (.G(XLXN_6));
+   AND2B1  XLXI_7 (.I0(XLXN_14), 
+                  .I1(ResetButton), 
+                  .O(Reset));
+   INV  XLXI_8 (.I(XLXN_14), 
+               .O(Dot));
+   AND2  XLXI_9 (.I0(OSC), 
+                .I1(XLXN_14), 
+                .O(Outt));
+endmodule

@@ -1,0 +1,111 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mod10.vf
+// /___/   /\     Timestamp : 10/03/2022 14:55:11
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/JK_LAB5/mod10.vf -w E:/JK_LAB5/mod10.sch
+//Design Name: mod10
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_mod10(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module mod10(clock, 
+             clk);
+
+    input clock;
+   output clk;
+   
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire clk_DUMMY;
+   
+   assign clk = clk_DUMMY;
+   (* HU_SET = "XLXI_1_0" *) 
+   FJKC_HXILINX_mod10  XLXI_1 (.C(clock), 
+                              .CLR(clk_DUMMY), 
+                              .J(XLXN_9), 
+                              .K(XLXN_9), 
+                              .Q(XLXN_10));
+   (* HU_SET = "XLXI_2_1" *) 
+   FJKC_HXILINX_mod10  XLXI_2 (.C(clock), 
+                              .CLR(clk_DUMMY), 
+                              .J(XLXN_6), 
+                              .K(XLXN_6), 
+                              .Q(XLXN_7));
+   (* HU_SET = "XLXI_3_3" *) 
+   FJKC_HXILINX_mod10  XLXI_3 (.C(clock), 
+                              .CLR(clk_DUMMY), 
+                              .J(XLXN_4), 
+                              .K(XLXN_4), 
+                              .Q(XLXN_5));
+   (* HU_SET = "XLXI_4_2" *) 
+   FJKC_HXILINX_mod10  XLXI_4 (.C(clock), 
+                              .CLR(clk_DUMMY), 
+                              .J(XLXN_3), 
+                              .K(XLXN_3), 
+                              .Q(XLXN_4));
+   AND2  XLXI_5 (.I0(XLXN_10), 
+                .I1(XLXN_5), 
+                .O(clk_DUMMY));
+   AND2  XLXI_6 (.I0(XLXN_4), 
+                .I1(XLXN_5), 
+                .O(XLXN_6));
+   AND3  XLXI_7 (.I0(XLXN_7), 
+                .I1(XLXN_5), 
+                .I2(XLXN_4), 
+                .O(XLXN_9));
+   VCC  XLXI_10 (.P(XLXN_3));
+endmodule

@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym sevseg E:/lab8/sevseg.sch E:/lab8/sevseg.sym 

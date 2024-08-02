@@ -1,0 +1,45 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : decoder1_2_new.vf
+// /___/   /\     Timestamp : 10/07/2022 10:47:37
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/lab6/decoder1_2_new.vf -w E:/lab6/decoder1_2_new.sch
+//Design Name: decoder1_2_new
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module decoder1_2_new(inDE, 
+                      o0, 
+                      o1);
+
+    input inDE;
+   output o0;
+   output o1;
+   
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   
+   AND2  XLXI_3 (.I0(XLXN_9), 
+                .I1(XLXN_10), 
+                .O(o1));
+   VCC  XLXI_4 (.P(XLXN_9));
+   INV  XLXI_5 (.I(inDE), 
+               .O(XLXN_10));
+   GND  XLXI_6 (.G(XLXN_11));
+   OR2  XLXI_7 (.I0(XLXN_11), 
+               .I1(inDE), 
+               .O(o0));
+endmodule

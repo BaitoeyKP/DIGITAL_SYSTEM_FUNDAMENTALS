@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\beaut\Desktop\flie\LAB7\ALU.vf" Line 390: Assignment to <arg fmt="%s" index="1">D9</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\beaut\Desktop\flie\LAB7\ALU.vf" Line 391: Assignment to <arg fmt="%s" index="1">D10</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\beaut\Desktop\flie\LAB7\ALU.vf" Line 392: Assignment to <arg fmt="%s" index="1">D11</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\beaut\Desktop\flie\LAB7\ALU.vf" Line 393: Assignment to <arg fmt="%s" index="1">D12</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\beaut\Desktop\flie\LAB7\ALU.vf" Line 394: Assignment to <arg fmt="%s" index="1">D13</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\beaut\Desktop\flie\LAB7\ALU.vf" Line 395: Assignment to <arg fmt="%s" index="1">D14</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\beaut\Desktop\flie\LAB7\ALU.vf" Line 396: Assignment to <arg fmt="%s" index="1">D15</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\beaut\Desktop\flie\LAB7\ALU.vf</arg>&quot; line <arg fmt="%s" index="2">628</arg>: Output port &lt;<arg fmt="%s" index="3">OUTM</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_4</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\beaut\Desktop\flie\LAB7\ALU.vf</arg>&quot; line <arg fmt="%s" index="2">376</arg>: Output port &lt;<arg fmt="%s" index="3">D9</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\beaut\Desktop\flie\LAB7\ALU.vf</arg>&quot; line <arg fmt="%s" index="2">376</arg>: Output port &lt;<arg fmt="%s" index="3">D10</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\beaut\Desktop\flie\LAB7\ALU.vf</arg>&quot; line <arg fmt="%s" index="2">376</arg>: Output port &lt;<arg fmt="%s" index="3">D11</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\beaut\Desktop\flie\LAB7\ALU.vf</arg>&quot; line <arg fmt="%s" index="2">376</arg>: Output port &lt;<arg fmt="%s" index="3">D12</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\beaut\Desktop\flie\LAB7\ALU.vf</arg>&quot; line <arg fmt="%s" index="2">376</arg>: Output port &lt;<arg fmt="%s" index="3">D13</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\beaut\Desktop\flie\LAB7\ALU.vf</arg>&quot; line <arg fmt="%s" index="2">376</arg>: Output port &lt;<arg fmt="%s" index="3">D14</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\beaut\Desktop\flie\LAB7\ALU.vf</arg>&quot; line <arg fmt="%s" index="2">376</arg>: Output port &lt;<arg fmt="%s" index="3">D15</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

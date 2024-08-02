@@ -1,0 +1,2 @@
+sch2hdl -intstyle ise -family spartan6 -verilog Counter0_5_new_drc.vf -w C:/Users/nicha/Downloads/digital_lab/Lab7_10/Counter0_5_new.sch 
+sch2sym -intstyle ise -family spartan6 -refsym Counter0_5_new C:/Users/nicha/Downloads/digital_lab/Lab7_10/Counter0_5_new.sch C:/Users/nicha/Downloads/digital_lab/Lab7_10/Counter0_5_new.sym 

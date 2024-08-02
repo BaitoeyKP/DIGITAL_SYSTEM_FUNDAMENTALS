@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan6 -refsym switch E:/USE/finalTest/switch.sch E:/USE/finalTest/switch.sym 
+sch2sym -intstyle ise -family spartan6 -refsym switch E:/USE/finalTest/switch.sch E:/USE/finalTest/switch.sym 

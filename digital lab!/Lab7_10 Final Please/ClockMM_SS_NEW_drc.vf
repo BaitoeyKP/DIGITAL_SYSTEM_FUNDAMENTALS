@@ -1,0 +1,213 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : ClockMM_SS_NEW_drc.vf
+// /___/   /\     Timestamp : 10/20/2022 15:21:15
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family spartan6 -verilog ClockMM_SS_NEW_drc.vf -w C:/Users/Thongthana/Documents/XilinxWorkSpace/Lab7_10/ClockMM_SS_NEW.sch
+//Design Name: ClockMM_SS_NEW
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_ClockMM_SS_NEW(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module Counter0_9NEW_MUSER_ClockMM_SS_NEW(Clear, 
+                                          Clock_In, 
+                                          Count, 
+                                          TC);
+
+    input Clear;
+    input Clock_In;
+   output [3:0] Count;
+   output TC;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_5;
+   wire XLXN_10;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire [3:0] Count_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Count[3:0] = Count_DUMMY[3:0];
+   assign TC = TC_DUMMY;
+   (* HU_SET = "XLXI_1_0" *) 
+   FJKC_HXILINX_ClockMM_SS_NEW  XLXI_1 (.C(Clock_In), 
+                                       .CLR(XLXN_10), 
+                                       .J(XLXN_2), 
+                                       .K(XLXN_2), 
+                                       .Q(Count_DUMMY[3]));
+   (* HU_SET = "XLXI_2_1" *) 
+   FJKC_HXILINX_ClockMM_SS_NEW  XLXI_2 (.C(Clock_In), 
+                                       .CLR(XLXN_10), 
+                                       .J(XLXN_5), 
+                                       .K(XLXN_5), 
+                                       .Q(Count_DUMMY[2]));
+   (* HU_SET = "XLXI_3_2" *) 
+   FJKC_HXILINX_ClockMM_SS_NEW  XLXI_3 (.C(Clock_In), 
+                                       .CLR(XLXN_10), 
+                                       .J(Count_DUMMY[0]), 
+                                       .K(Count_DUMMY[0]), 
+                                       .Q(Count_DUMMY[1]));
+   (* HU_SET = "XLXI_4_3" *) 
+   FJKC_HXILINX_ClockMM_SS_NEW  XLXI_4 (.C(Clock_In), 
+                                       .CLR(XLXN_10), 
+                                       .J(XLXN_1), 
+                                       .K(XLXN_1), 
+                                       .Q(Count_DUMMY[0]));
+   VCC  XLXI_5 (.P(XLXN_1));
+   AND3  XLXI_6 (.I0(Count_DUMMY[2]), 
+                .I1(Count_DUMMY[1]), 
+                .I2(Count_DUMMY[0]), 
+                .O(XLXN_2));
+   AND2  XLXI_7 (.I0(Count_DUMMY[1]), 
+                .I1(Count_DUMMY[0]), 
+                .O(XLXN_5));
+   AND4  XLXI_8 (.I0(Count_DUMMY[3]), 
+                .I1(XLXN_13), 
+                .I2(Count_DUMMY[1]), 
+                .I3(XLXN_14), 
+                .O(TC_DUMMY));
+   INV  XLXI_9 (.I(Count_DUMMY[0]), 
+               .O(XLXN_14));
+   INV  XLXI_10 (.I(Count_DUMMY[2]), 
+                .O(XLXN_13));
+   OR2  XLXI_12 (.I0(Clear), 
+                .I1(TC_DUMMY), 
+                .O(XLXN_10));
+endmodule
+`timescale 1ns / 1ps
+
+module Counter0_5_new_MUSER_ClockMM_SS_NEW(Clear, 
+                                           Inn, 
+                                           Count, 
+                                           TC);
+
+    input Clear;
+    input Inn;
+   output [3:0] Count;
+   output TC;
+   
+   wire XLXN_3;
+   wire XLXN_6;
+   wire XLXN_19;
+   wire [3:0] Count_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Count[3:0] = Count_DUMMY[3:0];
+   assign TC = TC_DUMMY;
+   (* HU_SET = "XLXI_1_4" *) 
+   FJKC_HXILINX_ClockMM_SS_NEW  XLXI_1 (.C(Inn), 
+                                       .CLR(XLXN_19), 
+                                       .J(XLXN_6), 
+                                       .K(XLXN_6), 
+                                       .Q(Count_DUMMY[2]));
+   (* HU_SET = "XLXI_2_5" *) 
+   FJKC_HXILINX_ClockMM_SS_NEW  XLXI_2 (.C(Inn), 
+                                       .CLR(XLXN_19), 
+                                       .J(Count_DUMMY[0]), 
+                                       .K(Count_DUMMY[0]), 
+                                       .Q(Count_DUMMY[1]));
+   (* HU_SET = "XLXI_3_6" *) 
+   FJKC_HXILINX_ClockMM_SS_NEW  XLXI_3 (.C(Inn), 
+                                       .CLR(XLXN_19), 
+                                       .J(XLXN_3), 
+                                       .K(XLXN_3), 
+                                       .Q(Count_DUMMY[0]));
+   VCC  XLXI_7 (.P(XLXN_3));
+   AND2  XLXI_8 (.I0(Count_DUMMY[1]), 
+                .I1(Count_DUMMY[0]), 
+                .O(XLXN_6));
+   AND3B1  XLXI_9 (.I0(Count_DUMMY[0]), 
+                  .I1(Count_DUMMY[1]), 
+                  .I2(Count_DUMMY[2]), 
+                  .O(TC_DUMMY));
+   OR2  XLXI_10 (.I0(Clear), 
+                .I1(TC_DUMMY), 
+                .O(XLXN_19));
+   GND  XLXI_11 (.G(Count_DUMMY[3]));
+endmodule
+`timescale 1ns / 1ps
+
+module ClockMM_SS_NEW(Clock_In, 
+                      Reset, 
+                      Min_Tens, 
+                      Min_Unit, 
+                      Sec_Tens, 
+                      Sec_Unit);
+
+    input Clock_In;
+    input Reset;
+   output [3:0] Min_Tens;
+   output [3:0] Min_Unit;
+   output [3:0] Sec_Tens;
+   output [3:0] Sec_Unit;
+   
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_6;
+   
+   Counter0_5_new_MUSER_ClockMM_SS_NEW  XLXI_2 (.Clear(Reset), 
+                                               .Inn(XLXN_3), 
+                                               .Count(Sec_Tens[3:0]), 
+                                               .TC(XLXN_4));
+   Counter0_9NEW_MUSER_ClockMM_SS_NEW  XLXI_5 (.Clear(Reset), 
+                                              .Clock_In(Clock_In), 
+                                              .Count(Sec_Unit[3:0]), 
+                                              .TC(XLXN_3));
+   Counter0_9NEW_MUSER_ClockMM_SS_NEW  XLXI_6 (.Clear(Reset), 
+                                              .Clock_In(XLXN_4), 
+                                              .Count(Min_Unit[3:0]), 
+                                              .TC(XLXN_6));
+   Counter0_9NEW_MUSER_ClockMM_SS_NEW  XLXI_7 (.Clear(Reset), 
+                                              .Clock_In(XLXN_6), 
+                                              .Count(Min_Tens[3:0]), 
+                                              .TC());
+endmodule

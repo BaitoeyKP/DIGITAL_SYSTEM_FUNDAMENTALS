@@ -1,0 +1,84 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Div4.vf
+// /___/   /\     Timestamp : 10/07/2022 09:50:48
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/lab6/Div4.vf -w E:/lab6/Div4.sch
+//Design Name: Div4
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_Div4(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module Div4(cin, 
+            cout);
+
+    input cin;
+   output cout;
+   
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   
+   (* HU_SET = "XLXI_1_14" *) 
+   FJKC_HXILINX_Div4  XLXI_1 (.C(cin), 
+                             .CLR(XLXN_4), 
+                             .J(XLXN_3), 
+                             .K(XLXN_3), 
+                             .Q(cout));
+   (* HU_SET = "XLXI_2_15" *) 
+   FJKC_HXILINX_Div4  XLXI_2 (.C(cin), 
+                             .CLR(XLXN_4), 
+                             .J(XLXN_2), 
+                             .K(XLXN_2), 
+                             .Q(XLXN_3));
+   VCC  XLXI_3 (.P(XLXN_2));
+   GND  XLXI_4 (.G(XLXN_4));
+endmodule

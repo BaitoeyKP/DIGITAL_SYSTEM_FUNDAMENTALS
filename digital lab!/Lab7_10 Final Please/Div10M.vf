@@ -1,0 +1,171 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Div10M.vf
+// /___/   /\     Timestamp : 10/19/2022 23:44:52
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/Users/nicha/Downloads/digital_lab/Lab7_10/Div10M.vf -w C:/Users/nicha/Downloads/digital_lab/Lab7_10/Div10M.sch
+//Design Name: Div10M
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_Div10M(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module Counter0_9_MUSER_Div10M(Clear, 
+                               Clock_In, 
+                               Count, 
+                               TC);
+
+    input Clear;
+    input Clock_In;
+   output [3:0] Count;
+   output TC;
+   
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_9;
+   wire XLXN_14;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire [3:0] Count_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Count[3:0] = Count_DUMMY[3:0];
+   assign TC = TC_DUMMY;
+   (* HU_SET = "XLXI_1_11" *) 
+   FJKC_HXILINX_Div10M  XLXI_1 (.C(Clock_In), 
+                               .CLR(XLXN_14), 
+                               .J(XLXN_6), 
+                               .K(XLXN_6), 
+                               .Q(Count_DUMMY[0]));
+   (* HU_SET = "XLXI_2_12" *) 
+   FJKC_HXILINX_Div10M  XLXI_2 (.C(Clock_In), 
+                               .CLR(XLXN_14), 
+                               .J(XLXN_9), 
+                               .K(XLXN_9), 
+                               .Q(Count_DUMMY[1]));
+   (* HU_SET = "XLXI_3_13" *) 
+   FJKC_HXILINX_Div10M  XLXI_3 (.C(Clock_In), 
+                               .CLR(XLXN_14), 
+                               .J(Count_DUMMY[3]), 
+                               .K(Count_DUMMY[3]), 
+                               .Q(Count_DUMMY[2]));
+   (* HU_SET = "XLXI_4_14" *) 
+   FJKC_HXILINX_Div10M  XLXI_4 (.C(Clock_In), 
+                               .CLR(XLXN_14), 
+                               .J(XLXN_5), 
+                               .K(XLXN_5), 
+                               .Q(Count_DUMMY[3]));
+   VCC  XLXI_5 (.P(XLXN_5));
+   AND3  XLXI_6 (.I0(Count_DUMMY[1]), 
+                .I1(Count_DUMMY[2]), 
+                .I2(Count_DUMMY[3]), 
+                .O(XLXN_6));
+   AND2  XLXI_8 (.I0(Count_DUMMY[2]), 
+                .I1(Count_DUMMY[3]), 
+                .O(XLXN_9));
+   AND4  XLXI_9 (.I0(Count_DUMMY[0]), 
+                .I1(XLXN_18), 
+                .I2(Count_DUMMY[2]), 
+                .I3(XLXN_19), 
+                .O(TC_DUMMY));
+   INV  XLXI_10 (.I(Count_DUMMY[1]), 
+                .O(XLXN_18));
+   INV  XLXI_11 (.I(Count_DUMMY[3]), 
+                .O(XLXN_19));
+   OR2  XLXI_12 (.I0(Clear), 
+                .I1(TC_DUMMY), 
+                .O(XLXN_14));
+endmodule
+`timescale 1ns / 1ps
+
+module Div10M(Clear, 
+              Clock_In, 
+              Clock_Out);
+
+    input Clear;
+    input Clock_In;
+   output Clock_Out;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   
+   Counter0_9_MUSER_Div10M  XLXI_1 (.Clear(Clear), 
+                                   .Clock_In(Clock_In), 
+                                   .Count(), 
+                                   .TC(XLXN_1));
+   Counter0_9_MUSER_Div10M  XLXI_2 (.Clear(Clear), 
+                                   .Clock_In(XLXN_1), 
+                                   .Count(), 
+                                   .TC(XLXN_2));
+   Counter0_9_MUSER_Div10M  XLXI_3 (.Clear(Clear), 
+                                   .Clock_In(XLXN_2), 
+                                   .Count(), 
+                                   .TC(XLXN_3));
+   Counter0_9_MUSER_Div10M  XLXI_4 (.Clear(Clear), 
+                                   .Clock_In(XLXN_3), 
+                                   .Count(), 
+                                   .TC(XLXN_4));
+   Counter0_9_MUSER_Div10M  XLXI_5 (.Clear(Clear), 
+                                   .Clock_In(XLXN_4), 
+                                   .Count(), 
+                                   .TC(XLXN_5));
+   Counter0_9_MUSER_Div10M  XLXI_6 (.Clear(Clear), 
+                                   .Clock_In(XLXN_5), 
+                                   .Count(), 
+                                   .TC(XLXN_6));
+   Counter0_9_MUSER_Div10M  XLXI_7 (.Clear(Clear), 
+                                   .Clock_In(XLXN_6), 
+                                   .Count(), 
+                                   .TC(Clock_Out));
+endmodule

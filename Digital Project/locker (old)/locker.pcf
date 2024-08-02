@@ -1,0 +1,28 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Dec 13 10:01:48 2022
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "esp1" LOCATE = SITE "P62" LEVEL 1;
+COMP "cm0_p44" LOCATE = SITE "P44" LEVEL 1;
+COMP "cm1_p43" LOCATE = SITE "P43" LEVEL 1;
+COMP "cm2_p33" LOCATE = SITE "P33" LEVEL 1;
+COMP "cm3_p30" LOCATE = SITE "P30" LEVEL 1;
+COMP "a_p41" LOCATE = SITE "P41" LEVEL 1;
+COMP "b_p40" LOCATE = SITE "P40" LEVEL 1;
+COMP "c_p35" LOCATE = SITE "P35" LEVEL 1;
+COMP "d_p34" LOCATE = SITE "P34" LEVEL 1;
+COMP "e_p32" LOCATE = SITE "P32" LEVEL 1;
+COMP "f_p29" LOCATE = SITE "P29" LEVEL 1;
+COMP "g_p27" LOCATE = SITE "P27" LEVEL 1;
+COMP "k3_5_p140" LOCATE = SITE "P140" LEVEL 1;
+COMP "k3_7_p138" LOCATE = SITE "P138" LEVEL 1;
+COMP "k3_9_p134" LOCATE = SITE "P134" LEVEL 1;
+COMP "esp0_lsb" LOCATE = SITE "P66" LEVEL 1;
+COMP "esp2_msb" LOCATE = SITE "P61" LEVEL 1;
+COMP "k3_11_p132" LOCATE = SITE "P132" LEVEL 1;
+COMP "k3_13_p127" LOCATE = SITE "P127" LEVEL 1;
+COMP "osc_p123" LOCATE = SITE "P123" LEVEL 1;
+COMP "k3_15_p124" LOCATE = SITE "P124" LEVEL 1;
+SCHEMATIC END;
+

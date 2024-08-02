@@ -1,0 +1,2 @@
+sch2hdl -intstyle ise -family spartan6 -verilog CommonAll_drc.vf -w C:/Users/nicha/Downloads/digital_lab/Lab7_10/CommonAll.sch 
+sch2sym -intstyle ise -family spartan6 -refsym CommonAll C:/Users/nicha/Downloads/digital_lab/Lab7_10/CommonAll.sch C:/Users/nicha/Downloads/digital_lab/Lab7_10/CommonAll.sym 

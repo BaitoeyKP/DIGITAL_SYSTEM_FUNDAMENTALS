@@ -1,0 +1,90 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : lab4.vf
+// /___/   /\     Timestamp : 09/12/2022 15:26:06
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/Lab4/lab4.vf -w E:/Lab4/lab4.sch
+//Design Name: lab4
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module lab4(B_SW2_P61, 
+            D_SW1_P62, 
+            E_SW0_P66, 
+            H_SW4_P58, 
+            S_SW3_P59, 
+            Buzzer_P83, 
+            LED0_P82);
+
+    input B_SW2_P61;
+    input D_SW1_P62;
+    input E_SW0_P66;
+    input H_SW4_P58;
+    input S_SW3_P59;
+   output Buzzer_P83;
+   output LED0_P82;
+   
+   wire XLXN_1;
+   wire XLXN_4;
+   wire XLXN_6;
+   wire XLXN_13;
+   wire XLXN_17;
+   wire XLXN_18;
+   wire XLXN_22;
+   wire XLXN_24;
+   wire XLXN_25;
+   wire XLXN_26;
+   wire XLXN_28;
+   wire XLXN_29;
+   
+   INV  XLXI_3 (.I(D_SW1_P62), 
+               .O(XLXN_1));
+   AND2  XLXI_4 (.I0(E_SW0_P66), 
+                .I1(XLXN_1), 
+                .O(XLXN_26));
+   INV  XLXI_5 (.I(B_SW2_P61), 
+               .O(XLXN_4));
+   AND2  XLXI_6 (.I0(XLXN_4), 
+                .I1(S_SW3_P59), 
+                .O(XLXN_6));
+   AND2  XLXI_7 (.I0(E_SW0_P66), 
+                .I1(XLXN_6), 
+                .O(XLXN_25));
+   AND2  XLXI_8 (.I0(XLXN_13), 
+                .I1(H_SW4_P58), 
+                .O(XLXN_24));
+   INV  XLXI_9 (.I(E_SW0_P66), 
+               .O(XLXN_13));
+   AND2  XLXI_10 (.I0(D_SW1_P62), 
+                 .I1(XLXN_17), 
+                 .O(XLXN_22));
+   AND2  XLXI_11 (.I0(B_SW2_P61), 
+                 .I1(XLXN_18), 
+                 .O(XLXN_17));
+   INV  XLXI_12 (.I(S_SW3_P59), 
+                .O(XLXN_18));
+   OR2  XLXI_13 (.I0(XLXN_24), 
+                .I1(XLXN_22), 
+                .O(XLXN_28));
+   OR2  XLXI_14 (.I0(XLXN_26), 
+                .I1(XLXN_25), 
+                .O(XLXN_29));
+   OR2  XLXI_15 (.I0(XLXN_29), 
+                .I1(XLXN_28), 
+                .O(Buzzer_P83));
+   OR2  XLXI_16 (.I0(XLXN_29), 
+                .I1(XLXN_28), 
+                .O(LED0_P82));
+endmodule

@@ -1,0 +1,16 @@
+xst -intstyle ise -ifn "E:/Lab4/lab4.xst" -ofn "E:/Lab4/lab4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab4.ucf -p xc6slx9-tqg144-3 lab4.ngc lab4.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o lab4_map.ncd lab4.ngd lab4.pcf 
+par -w -intstyle ise -ol high -mt off lab4_map.ncd lab4.ncd lab4.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab4.twx lab4.ncd -o lab4.twr lab4.pcf -ucf lab4.ucf 
+bitgen -intstyle ise -f lab4.ut lab4.ncd 
+xst -intstyle ise -ifn "E:/Lab4/lab4.xst" -ofn "E:/Lab4/lab4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab4.ucf -p xc6slx9-tqg144-3 lab4.ngc lab4.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o lab4_map.ncd lab4.ngd lab4.pcf 
+par -w -intstyle ise -ol high -mt off lab4_map.ncd lab4.ncd lab4.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab4.twx lab4.ncd -o lab4.twr lab4.pcf -ucf lab4.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab4.ucf -p xc6slx9-tqg144-3 lab4.ngc lab4.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o lab4_map.ncd lab4.ngd lab4.pcf 
+par -w -intstyle ise -ol high -mt off lab4_map.ncd lab4.ncd lab4.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab4.twx lab4.ncd -o lab4.twr lab4.pcf -ucf lab4.ucf 
+bitgen -intstyle ise -f lab4.ut lab4.ncd 

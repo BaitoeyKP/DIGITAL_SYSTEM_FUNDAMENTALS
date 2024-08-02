@@ -1,0 +1,107 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : SecondCounter.vf
+// /___/   /\     Timestamp : 11/21/2021 20:22:22
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/Users/beaut/Desktop/flie/LAB7/SecondCounter.vf -w C:/Users/beaut/Desktop/flie/LAB7/SecondCounter.sch
+//Design Name: SecondCounter
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module SecondCounter(CLKIN, 
+                     RST, 
+                     BIT, 
+                     MIN, 
+                     OUTS);
+
+    input CLKIN;
+    input RST;
+   output [3:0] BIT;
+   output [3:0] MIN;
+   output OUTS;
+   
+   wire CLKOUT;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_9;
+   wire XLXN_13;
+   wire XLXN_33;
+   wire XLXN_36;
+   wire XLXN_44;
+   wire XLXN_46;
+   wire XLXN_47;
+   wire OUTS_DUMMY;
+   wire [3:0] BIT_DUMMY;
+   wire [3:0] MIN_DUMMY;
+   
+   assign BIT[3:0] = BIT_DUMMY[3:0];
+   assign MIN[3:0] = MIN_DUMMY[3:0];
+   assign OUTS = OUTS_DUMMY;
+   FDC  XLXI_1 (.C(XLXN_9), 
+               .CLR(XLXN_13), 
+               .D(XLXN_6), 
+               .Q(BIT_DUMMY[2]));
+   INV  XLXI_2 (.I(BIT_DUMMY[0]), 
+               .O(XLXN_7));
+   INV  XLXI_3 (.I(BIT_DUMMY[1]), 
+               .O(XLXN_9));
+   INV  XLXI_4 (.I(BIT_DUMMY[3]), 
+               .O(CLKOUT));
+   FDC  XLXI_5 (.C(CLKIN), 
+               .CLR(XLXN_13), 
+               .D(XLXN_7), 
+               .Q(BIT_DUMMY[0]));
+   AND2  XLXI_6 (.I0(BIT_DUMMY[3]), 
+                .I1(BIT_DUMMY[1]), 
+                .O(XLXN_46));
+   FDC  XLXI_7 (.C(XLXN_7), 
+               .CLR(XLXN_13), 
+               .D(XLXN_9), 
+               .Q(BIT_DUMMY[1]));
+   INV  XLXI_8 (.I(BIT_DUMMY[2]), 
+               .O(XLXN_6));
+   FDC  XLXI_9 (.C(XLXN_6), 
+               .CLR(XLXN_13), 
+               .D(CLKOUT), 
+               .Q(BIT_DUMMY[3]));
+   FDC  XLXI_10 (.C(CLKOUT), 
+                .CLR(XLXN_44), 
+                .D(XLXN_36), 
+                .Q(MIN_DUMMY[0]));
+   FDC  XLXI_11 (.C(XLXN_36), 
+                .CLR(XLXN_44), 
+                .D(XLXN_33), 
+                .Q(MIN_DUMMY[1]));
+   INV  XLXI_12 (.I(MIN_DUMMY[0]), 
+                .O(XLXN_36));
+   INV  XLXI_13 (.I(MIN_DUMMY[1]), 
+                .O(XLXN_33));
+   INV  XLXI_14 (.I(MIN_DUMMY[2]), 
+                .O(OUTS_DUMMY));
+   FDC  XLXI_15 (.C(XLXN_33), 
+                .CLR(XLXN_44), 
+                .D(OUTS_DUMMY), 
+                .Q(MIN_DUMMY[2]));
+   AND2  XLXI_16 (.I0(MIN_DUMMY[1]), 
+                 .I1(MIN_DUMMY[2]), 
+                 .O(XLXN_47));
+   GND  XLXI_87 (.G(MIN_DUMMY[3]));
+   OR2  XLXI_88 (.I0(XLXN_47), 
+                .I1(RST), 
+                .O(XLXN_44));
+   OR2  XLXI_89 (.I0(XLXN_46), 
+                .I1(RST), 
+                .O(XLXN_13));
+endmodule

@@ -1,0 +1,23 @@
+
+
+NET "esp0_lsb" LOC = P66;
+NET "esp1" LOC = P62;
+NET "esp2_msb" LOC = P61;
+NET "k3_5_p140" LOC = P140;
+NET "k3_7_p138" LOC = P138;
+NET "k3_9_p134" LOC = P134;
+NET "k3_11_p132" LOC = P132;
+NET "k3_13_p127" LOC = P127;
+NET "k3_15_p124" LOC = P124;
+NET "osc_p123" LOC = P123;
+NET "a_p41" LOC = P41;
+NET "b_p40" LOC = P40;
+NET "c_p35" LOC = P35;
+NET "d_p34" LOC = P34;
+NET "e_p32" LOC = P32;
+NET "f_p29" LOC = P29;
+NET "g_p27" LOC = P27;
+NET "cm0_p44" LOC = P44;
+NET "cm1_p43" LOC = P43;
+NET "cm2_p33" LOC = P33;
+NET "cm3_p30" LOC = P30;

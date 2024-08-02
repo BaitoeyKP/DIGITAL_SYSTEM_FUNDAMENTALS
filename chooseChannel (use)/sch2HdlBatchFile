@@ -1,0 +1,3 @@
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,E:/project/chooseChannel/chooseChannel.vf,-w,E:/project/chooseChannel/chooseChannel.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,E:/project/chooseChannel/counter1_6.vf,-w,E:/project/chooseChannel/counter1_6.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,E:/project/chooseChannel/chooseChannel.vf,-w,E:/project/chooseChannel/chooseChannel.sch

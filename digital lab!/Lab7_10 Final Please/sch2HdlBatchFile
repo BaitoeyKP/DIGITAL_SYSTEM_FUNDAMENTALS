@@ -1,0 +1,4 @@
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/Users/Thongthana/Documents/XilinxWorkSpace/Lab7_10/main_lab7_10.vf,-w,C:/Users/Thongthana/Documents/XilinxWorkSpace/Lab7_10/main_lab7_10.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/Users/Thongthana/Documents/XilinxWorkSpace/Lab7_10/Counter0_9NEW.vf,-w,C:/Users/Thongthana/Documents/XilinxWorkSpace/Lab7_10/Counter0_9NEW.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/Users/Thongthana/Documents/XilinxWorkSpace/Lab7_10/ClockMM_SS_NEW.vf,-w,C:/Users/Thongthana/Documents/XilinxWorkSpace/Lab7_10/ClockMM_SS_NEW.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/Users/Thongthana/Documents/XilinxWorkSpace/Lab7_10/main_lab7_10.vf,-w,C:/Users/Thongthana/Documents/XilinxWorkSpace/Lab7_10/main_lab7_10.sch

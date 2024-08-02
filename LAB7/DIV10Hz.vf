@@ -1,0 +1,67 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : DIV10Hz.vf
+// /___/   /\     Timestamp : 11/21/2021 20:22:24
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/Users/beaut/Desktop/flie/LAB7/DIV10Hz.vf -w C:/Users/beaut/Desktop/flie/LAB7/DIV10Hz.sch
+//Design Name: DIV10Hz
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module DIV10Hz(CLKIN, 
+               CLKOUT);
+
+    input CLKIN;
+   output CLKOUT;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_5;
+   wire XLXN_7;
+   wire XLXN_10;
+   wire XLXN_12;
+   wire XLXN_19;
+   wire CLKOUT_DUMMY;
+   
+   assign CLKOUT = CLKOUT_DUMMY;
+   FDC  XLXI_1 (.C(CLKIN), 
+               .CLR(XLXN_19), 
+               .D(XLXN_12), 
+               .Q(XLXN_10));
+   FDC  XLXI_2 (.C(XLXN_12), 
+               .CLR(XLXN_19), 
+               .D(XLXN_5), 
+               .Q(XLXN_1));
+   FDC  XLXI_3 (.C(XLXN_5), 
+               .CLR(XLXN_19), 
+               .D(XLXN_7), 
+               .Q(XLXN_2));
+   FDC  XLXI_4 (.C(XLXN_7), 
+               .CLR(XLXN_19), 
+               .D(CLKOUT_DUMMY), 
+               .Q(XLXN_3));
+   INV  XLXI_5 (.I(XLXN_10), 
+               .O(XLXN_12));
+   INV  XLXI_6 (.I(XLXN_1), 
+               .O(XLXN_5));
+   INV  XLXI_7 (.I(XLXN_2), 
+               .O(XLXN_7));
+   INV  XLXI_8 (.I(XLXN_3), 
+               .O(CLKOUT_DUMMY));
+   AND2  XLXI_9 (.I0(XLXN_3), 
+                .I1(XLXN_1), 
+                .O(XLXN_19));
+endmodule

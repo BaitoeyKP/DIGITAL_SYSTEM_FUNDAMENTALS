@@ -1,0 +1,2 @@
+sch2hdl -intstyle ise -family spartan6 -verilog ClockState_drc.vf -w C:/Users/nicha/Downloads/digital_lab/Lab7_10/ClockState.sch 
+sch2sym -intstyle ise -family spartan6 -refsym ClockState C:/Users/nicha/Downloads/digital_lab/Lab7_10/ClockState.sch C:/Users/nicha/Downloads/digital_lab/Lab7_10/ClockState.sym 

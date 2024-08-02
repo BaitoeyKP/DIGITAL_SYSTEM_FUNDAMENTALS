@@ -1,0 +1,57 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Tue Nov 01 22:22:41 2022
+# Process ID: 3848
+# Log file: E:/lab7_new/planAhead_run_1/planAhead.log
+# Journal file: E:/lab7_new/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source E:/lab7_new/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P41 [get_ports a_P41]
+endgroup
+startgroup
+set_property package_pin P40 [get_ports b_P40]
+endgroup
+startgroup
+set_property package_pin P35 [get_ports c_P35]
+endgroup
+startgroup
+set_property package_pin P44 [get_ports CM0_P44]
+endgroup
+startgroup
+set_property package_pin P43 [get_ports CM1_P43]
+endgroup
+startgroup
+set_property package_pin P33 [get_ports CM2_P33]
+endgroup
+startgroup
+set_property package_pin P30 [get_ports CM3_P30]
+endgroup
+startgroup
+set_property package_pin P34 [get_ports d_P34]
+endgroup
+startgroup
+set_property package_pin P26 [get_ports dot_P26]
+endgroup
+startgroup
+set_property package_pin P32 [get_ports e_P32]
+endgroup
+startgroup
+set_property package_pin P29 [get_ports f_P29]
+endgroup
+startgroup
+set_property package_pin P27 [get_ports g_P27]
+endgroup
+startgroup
+set_property package_pin P123 [get_ports OSC_P123]
+endgroup
+startgroup
+set_property package_pin P47 [get_ports PB3_P47]
+endgroup
+startgroup
+set_property package_pin P48 [get_ports PB4_P48]
+endgroup
+save_constraints

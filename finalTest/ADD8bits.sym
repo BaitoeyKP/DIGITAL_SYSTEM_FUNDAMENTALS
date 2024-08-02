@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="ADD8bits">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2022-11-24T3:42:39</timestamp>
+    <pin polarity="Input" x="0" y="-992" name="SW0_A0" />
+    <pin polarity="Input" x="0" y="-928" name="SW1_A1" />
+    <pin polarity="Input" x="0" y="-864" name="SW2_A2" />
+    <pin polarity="Input" x="0" y="-800" name="SW3_A3" />
+    <pin polarity="Input" x="0" y="-736" name="DIP8_B0" />
+    <pin polarity="Input" x="0" y="-672" name="DIP7_B1" />
+    <pin polarity="Input" x="0" y="-608" name="DIP6_B2" />
+    <pin polarity="Input" x="0" y="-544" name="DIP5_A3" />
+    <pin polarity="Input" x="0" y="-480" name="SW4_A4" />
+    <pin polarity="Input" x="0" y="-416" name="SW5_A5" />
+    <pin polarity="Input" x="0" y="-352" name="SW6_A6" />
+    <pin polarity="Input" x="0" y="-288" name="SW7_A7" />
+    <pin polarity="Input" x="0" y="-224" name="DIP4_B4" />
+    <pin polarity="Input" x="0" y="-160" name="DIP3_B5" />
+    <pin polarity="Input" x="0" y="-96" name="DIP2_B6" />
+    <pin polarity="Input" x="0" y="-32" name="DIP1_B7" />
+    <pin polarity="Output" x="384" y="-992" name="S4" />
+    <pin polarity="Output" x="384" y="-880" name="S5" />
+    <pin polarity="Output" x="384" y="-768" name="S6" />
+    <pin polarity="Output" x="384" y="-656" name="S7" />
+    <pin polarity="Output" x="384" y="-544" name="S3" />
+    <pin polarity="Output" x="384" y="-432" name="S2" />
+    <pin polarity="Output" x="384" y="-320" name="S0" />
+    <pin polarity="Output" x="384" y="-208" name="S1" />
+    <pin polarity="Output" x="384" y="-96" name="CO" />
+    <graph>
+        <rect width="256" x="64" y="-1024" height="1024" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="192" y="-1032" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-992" type="pin SW0_A0" />
+        <line x2="0" y1="-992" y2="-992" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-928" type="pin SW1_A1" />
+        <line x2="0" y1="-928" y2="-928" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-864" type="pin SW2_A2" />
+        <line x2="0" y1="-864" y2="-864" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-800" type="pin SW3_A3" />
+        <line x2="0" y1="-800" y2="-800" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-736" type="pin DIP8_B0" />
+        <line x2="0" y1="-736" y2="-736" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-672" type="pin DIP7_B1" />
+        <line x2="0" y1="-672" y2="-672" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-608" type="pin DIP6_B2" />
+        <line x2="0" y1="-608" y2="-608" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-544" type="pin DIP5_A3" />
+        <line x2="0" y1="-544" y2="-544" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-480" type="pin SW4_A4" />
+        <line x2="0" y1="-480" y2="-480" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-416" type="pin SW5_A5" />
+        <line x2="0" y1="-416" y2="-416" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-352" type="pin SW6_A6" />
+        <line x2="0" y1="-352" y2="-352" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin SW7_A7" />
+        <line x2="0" y1="-288" y2="-288" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin DIP4_B4" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin DIP3_B5" />
+        <line x2="0" y1="-160" y2="-160" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin DIP2_B6" />
+        <line x2="0" y1="-96" y2="-96" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin DIP1_B7" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-992" type="pin S4" />
+        <line x2="384" y1="-992" y2="-992" x1="320" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-880" type="pin S5" />
+        <line x2="384" y1="-880" y2="-880" x1="320" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-768" type="pin S6" />
+        <line x2="384" y1="-768" y2="-768" x1="320" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-656" type="pin S7" />
+        <line x2="384" y1="-656" y2="-656" x1="320" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-544" type="pin S3" />
+        <line x2="384" y1="-544" y2="-544" x1="320" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-432" type="pin S2" />
+        <line x2="384" y1="-432" y2="-432" x1="320" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-320" type="pin S0" />
+        <line x2="384" y1="-320" y2="-320" x1="320" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-208" type="pin S1" />
+        <line x2="384" y1="-208" y2="-208" x1="320" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-96" type="pin CO" />
+        <line x2="384" y1="-96" y2="-96" x1="320" />
+    </graph>
+</symbol>

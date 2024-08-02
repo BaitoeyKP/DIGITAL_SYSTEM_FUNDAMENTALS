@@ -1,0 +1,95 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Common_Selector.vf
+// /___/   /\     Timestamp : 11/01/2022 22:22:35
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/lab7_new/Common_Selector.vf -w E:/lab7_new/Common_Selector.sch
+//Design Name: Common_Selector
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module D2_4E_HXILINX_Common_Selector (D0, D1, D2, D3, A0, A1, E);
+    
+
+   output D0;
+   output D1;
+   output D2;
+   output D3;
+
+   input  A0;
+   input  A1;
+   input  E;
+  
+   reg D0;
+   reg D1;
+   reg D2;
+   reg D3;
+
+      always @ (A0 or A1 or E)
+      begin
+         if(!E)
+           {D3, D2, D1, D0} <= 4'b0000;
+        else
+        begin
+           case({A1,A0})
+             2'b00 : {D3,D2,D1,D0} <= 4'b0001;
+             2'b01 : {D3,D2,D1,D0} <= 4'b0010;
+             2'b10 : {D3,D2,D1,D0} <= 4'b0100;
+             2'b11 : {D3,D2,D1,D0} <= 4'b1000;
+          endcase
+        end
+     end 
+
+endmodule
+`timescale 1ns / 1ps
+
+module Common_Selector(in0, 
+                       in1, 
+                       CM0, 
+                       CM1, 
+                       CM2, 
+                       CM3);
+
+    input in0;
+    input in1;
+   output CM0;
+   output CM1;
+   output CM2;
+   output CM3;
+   
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_12;
+   
+   (* HU_SET = "XLXI_1_17" *) 
+   D2_4E_HXILINX_Common_Selector  XLXI_1 (.A0(in0), 
+                                         .A1(in1), 
+                                         .E(XLXN_12), 
+                                         .D0(XLXN_3), 
+                                         .D1(XLXN_4), 
+                                         .D2(XLXN_5), 
+                                         .D3(XLXN_6));
+   INV  XLXI_2 (.I(XLXN_3), 
+               .O(CM0));
+   INV  XLXI_3 (.I(XLXN_4), 
+               .O(CM1));
+   INV  XLXI_4 (.I(XLXN_5), 
+               .O(CM2));
+   INV  XLXI_5 (.I(XLXN_6), 
+               .O(CM3));
+   VCC  XLXI_6 (.P(XLXN_12));
+endmodule

@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym mux8to4 E:/lab6/mux8to4.sch E:/lab6/mux8to4.sym 

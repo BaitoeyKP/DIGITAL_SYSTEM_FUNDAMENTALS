@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan6 -refsym Controller E:/lab7_new/Controller.sch E:/lab7_new/Controller.sym 
+sch2sym -intstyle ise -family spartan6 -refsym Controller E:/lab7_new/Controller.sch E:/lab7_new/Controller.sym 

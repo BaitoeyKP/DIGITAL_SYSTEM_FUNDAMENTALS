@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan6 -refsym ADD8bits E:/USE/finalTest/ADD8bits.sch E:/USE/finalTest/ADD8bits.sym 
+sch2sym -intstyle ise -family spartan6 -refsym ADD8bits E:/USE/finalTest/ADD8bits.sch E:/USE/finalTest/ADD8bits.sym 

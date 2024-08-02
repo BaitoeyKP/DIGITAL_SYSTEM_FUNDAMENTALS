@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym segment_lab5 E:/USE/finalTest/segment_lab5.sch E:/USE/finalTest/segment_lab5.sym 

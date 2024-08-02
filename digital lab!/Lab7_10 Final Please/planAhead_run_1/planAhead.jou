@@ -1,0 +1,70 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Wed Oct 19 23:46:09 2022
+# Process ID: 16844
+# Log file: C:/Users/nicha/Downloads/digital_lab/Lab7_10/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/nicha/Downloads/digital_lab/Lab7_10/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/nicha/Downloads/digital_lab/Lab7_10/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P123 [get_ports OSC]
+endgroup
+set_property is_loc_fixed false [get_ports [list  OSC]]
+startgroup
+set_property package_pin P48 [get_ports ResetButton]
+endgroup
+set_property is_loc_fixed false [get_ports [list  ResetButton]]
+set_property is_loc_fixed true [get_ports [list  OSC]]
+set_property is_loc_fixed true [get_ports [list  ResetButton]]
+startgroup
+set_property package_pin P47 [get_ports StartStopButton]
+endgroup
+set_property is_loc_fixed false [get_ports [list  StartStopButton]]
+set_property is_loc_fixed true [get_ports [list  StartStopButton]]
+startgroup
+set_property package_pin P26 [get_ports Dot]
+endgroup
+set_property is_loc_fixed false [get_ports [list  Dot]]
+set_property is_loc_fixed true [get_ports [list  Dot]]
+set_property is_loc_fixed false [get_ports [list  Dot]]
+set_property is_loc_fixed true [get_ports [list  Dot]]
+startgroup
+set_property package_pin P30 [get_ports {XLXN_62[3]}]
+endgroup
+startgroup
+set_property package_pin P33 [get_ports {XLXN_62[2]}]
+endgroup
+startgroup
+set_property package_pin P43 [get_ports {XLXN_62[1]}]
+endgroup
+startgroup
+set_property package_pin P44 [get_ports {XLXN_62[0]}]
+endgroup
+startgroup
+set_property package_pin P41 [get_ports {XLXN_46[0]}]
+endgroup
+startgroup
+set_property package_pin P40 [get_ports {XLXN_46[1]}]
+endgroup
+startgroup
+set_property package_pin P35 [get_ports {XLXN_46[2]}]
+endgroup
+startgroup
+set_property package_pin P34 [get_ports {XLXN_46[3]}]
+endgroup
+set_property package_pin "" [get_ports [list  {XLXN_46[4]}]]
+startgroup
+set_property package_pin P32 [get_ports {XLXN_46[4]}]
+endgroup
+startgroup
+set_property package_pin P29 [get_ports {XLXN_46[5]}]
+endgroup
+startgroup
+set_property package_pin P27 [get_ports {XLXN_46[6]}]
+endgroup
+set_property is_loc_fixed false [get_ports [list  {XLXN_46[6]}]]
+set_property is_loc_fixed true [get_ports [list  {XLXN_46[6]}]]
+save_constraints

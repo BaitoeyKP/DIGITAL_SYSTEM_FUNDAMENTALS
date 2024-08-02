@@ -1,0 +1,6 @@
+verilog work "segment.vf"
+verilog work "mux8to4.vf"
+verilog work "div10.vf"
+verilog work "decoder1_2_new.vf"
+verilog work "counter0_9_0tctest.vf"
+verilog work "lab6.vf"

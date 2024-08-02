@@ -1,0 +1,887 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : lab8Adder.vf
+// /___/   /\     Timestamp : 10/23/2022 14:15:18
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/lab8_adder/lab8Adder.vf -w E:/lab8_adder/lab8Adder.sch
+//Design Name: lab8Adder
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module ADD4_HXILINX_lab8Adder (CO, OFL, S0, S1, S2, S3, A0, A1, A2, A3, B0, B1, B2, B3 , CI);
+   
+   output      CO;
+   output      OFL;
+   output      S0;
+   output      S1;
+   output      S2;
+   output      S3;
+
+   input       A0;
+   input       A1;
+   input       A2;
+   input       A3;
+   input       B0;
+   input       B1;
+   input       B2;
+   input       B3;
+   input       CI;
+
+
+   assign   {CO, S3, S2, S1, S0} = {A3, A2, A1, A0} + {B3, B2, B1, B0} + CI;
+   assign   OFL = (A3 & B3 & (~S3)) | ((~A3) & (~B3) & S3); 
+   
+endmodule
+`timescale  100 ps / 10 ps
+
+module NOR9_HXILINX_lab8Adder (O, I0, I1, I2, I3, I4, I5, I6, I7, I8);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+   input I6;
+   input I7;
+   input I8;
+
+assign O = !(I0 || I1 || I2 || I3 || I4 || I5 || I6 || I7 || I8 );
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module OR6_HXILINX_lab8Adder (O, I0, I1, I2, I3, I4, I5);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+
+assign O = (I0 || I1 || I2 || I3 || I4 || I5);
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module D2_4E_HXILINX_lab8Adder (D0, D1, D2, D3, A0, A1, E);
+    
+
+   output D0;
+   output D1;
+   output D2;
+   output D3;
+
+   input  A0;
+   input  A1;
+   input  E;
+  
+   reg D0;
+   reg D1;
+   reg D2;
+   reg D3;
+
+      always @ (A0 or A1 or E)
+      begin
+         if(!E)
+           {D3, D2, D1, D0} <= 4'b0000;
+        else
+        begin
+           case({A1,A0})
+             2'b00 : {D3,D2,D1,D0} <= 4'b0001;
+             2'b01 : {D3,D2,D1,D0} <= 4'b0010;
+             2'b10 : {D3,D2,D1,D0} <= 4'b0100;
+             2'b11 : {D3,D2,D1,D0} <= 4'b1000;
+          endcase
+        end
+     end 
+
+endmodule
+`timescale 100 ps / 10 ps
+
+module CB2CE_HXILINX_lab8Adder(CEO, Q0, Q1, TC, C, CE, CLR);
+   
+   localparam TERMINAL_COUNT = 2'b11;
+   
+   output             CEO;
+   output             Q0;
+   output             Q1;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   
+   reg                Q0;
+   reg                Q1;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  {Q1, Q0} <= 2'b00;
+	else if (CE)
+	  {Q1,Q0} <= {Q1,Q0} + 1;
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = ({Q1,Q0} == TERMINAL_COUNT);
+   
+endmodule
+`timescale 1ns / 1ps
+
+module segment_MUSER_lab8Adder(A, 
+                               B, 
+                               C, 
+                               D, 
+                               a_P41, 
+                               b_P40, 
+                               c_P35, 
+                               d_P34, 
+                               e_P32, 
+                               f_P29, 
+                               g_P27);
+
+    input A;
+    input B;
+    input C;
+    input D;
+   output a_P41;
+   output b_P40;
+   output c_P35;
+   output d_P34;
+   output e_P32;
+   output f_P29;
+   output g_P27;
+   
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_27;
+   wire XLXN_28;
+   wire XLXN_29;
+   wire XLXN_30;
+   wire XLXN_31;
+   wire XLXN_32;
+   wire XLXN_33;
+   wire XLXN_34;
+   wire XLXN_36;
+   wire XLXN_37;
+   wire XLXN_41;
+   wire XLXN_46;
+   wire XLXN_47;
+   wire XLXN_49;
+   wire XLXN_50;
+   wire XLXN_51;
+   wire XLXN_69;
+   wire XLXN_70;
+   wire XLXN_71;
+   wire XLXN_72;
+   wire XLXN_73;
+   wire XLXN_74;
+   wire XLXN_75;
+   wire XLXN_76;
+   wire XLXN_77;
+   wire XLXN_78;
+   wire XLXN_79;
+   wire XLXN_92;
+   wire XLXN_93;
+   wire XLXN_94;
+   wire XLXN_95;
+   wire XLXN_96;
+   wire XLXN_97;
+   wire XLXN_98;
+   wire XLXN_99;
+   wire XLXN_100;
+   wire XLXN_101;
+   wire XLXN_102;
+   wire XLXN_121;
+   wire XLXN_122;
+   wire XLXN_123;
+   wire XLXN_125;
+   wire XLXN_126;
+   wire XLXN_127;
+   wire XLXN_128;
+   wire XLXN_138;
+   wire XLXN_139;
+   wire XLXN_140;
+   wire XLXN_141;
+   wire XLXN_142;
+   wire XLXN_143;
+   wire XLXN_144;
+   wire XLXN_146;
+   wire XLXN_151;
+   wire XLXN_152;
+   wire XLXN_153;
+   wire XLXN_171;
+   wire XLXN_172;
+   wire XLXN_173;
+   wire XLXN_174;
+   wire XLXN_175;
+   wire XLXN_176;
+   wire XLXN_177;
+   wire XLXN_178;
+   wire XLXN_179;
+   wire XLXN_180;
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   OR6_HXILINX_lab8Adder  XLXI_1 (.I0(XLXN_7), 
+                                 .I1(XLXN_6), 
+                                 .I2(XLXN_5), 
+                                 .I3(XLXN_4), 
+                                 .I4(XLXN_3), 
+                                 .I5(XLXN_2), 
+                                 .O(a_P41));
+   AND2  XLXI_2 (.I0(XLXN_9), 
+                .I1(XLXN_8), 
+                .O(XLXN_2));
+   AND2  XLXI_3 (.I0(B), 
+                .I1(XLXN_10), 
+                .O(XLXN_3));
+   AND2  XLXI_5 (.I0(B), 
+                .I1(C), 
+                .O(XLXN_5));
+   AND2  XLXI_7 (.I0(XLXN_14), 
+                .I1(D), 
+                .O(XLXN_7));
+   INV  XLXI_8 (.I(C), 
+               .O(XLXN_8));
+   INV  XLXI_9 (.I(A), 
+               .O(XLXN_9));
+   INV  XLXI_10 (.I(D), 
+                .O(XLXN_10));
+   AND3  XLXI_11 (.I0(A), 
+                 .I1(C), 
+                 .I2(XLXN_11), 
+                 .O(XLXN_4));
+   AND3  XLXI_12 (.I0(XLXN_13), 
+                 .I1(XLXN_12), 
+                 .I2(D), 
+                 .O(XLXN_6));
+   INV  XLXI_13 (.I(D), 
+                .O(XLXN_11));
+   INV  XLXI_14 (.I(C), 
+                .O(XLXN_12));
+   INV  XLXI_15 (.I(B), 
+                .O(XLXN_13));
+   INV  XLXI_16 (.I(A), 
+                .O(XLXN_14));
+   (* HU_SET = "XLXI_17_1" *) 
+   OR6_HXILINX_lab8Adder  XLXI_17 (.I0(XLXN_32), 
+                                  .I1(XLXN_31), 
+                                  .I2(XLXN_30), 
+                                  .I3(XLXN_29), 
+                                  .I4(XLXN_28), 
+                                  .I5(XLXN_27), 
+                                  .O(b_P40));
+   AND2  XLXI_18 (.I0(XLXN_34), 
+                 .I1(XLXN_33), 
+                 .O(XLXN_27));
+   AND2  XLXI_19 (.I0(XLXN_47), 
+                 .I1(XLXN_46), 
+                 .O(XLXN_29));
+   AND3  XLXI_20 (.I0(XLXN_37), 
+                 .I1(XLXN_36), 
+                 .I2(XLXN_41), 
+                 .O(XLXN_28));
+   AND3  XLXI_21 (.I0(A), 
+                 .I1(B), 
+                 .I2(XLXN_49), 
+                 .O(XLXN_30));
+   AND3  XLXI_22 (.I0(A), 
+                 .I1(XLXN_50), 
+                 .I2(D), 
+                 .O(XLXN_31));
+   AND3  XLXI_23 (.I0(XLXN_51), 
+                 .I1(B), 
+                 .I2(D), 
+                 .O(XLXN_32));
+   INV  XLXI_24 (.I(D), 
+                .O(XLXN_33));
+   INV  XLXI_25 (.I(C), 
+                .O(XLXN_34));
+   INV  XLXI_26 (.I(B), 
+                .O(XLXN_36));
+   INV  XLXI_27 (.I(A), 
+                .O(XLXN_37));
+   INV  XLXI_35 (.I(D), 
+                .O(XLXN_41));
+   INV  XLXI_44 (.I(C), 
+                .O(XLXN_46));
+   INV  XLXI_45 (.I(B), 
+                .O(XLXN_47));
+   INV  XLXI_49 (.I(D), 
+                .O(XLXN_49));
+   INV  XLXI_50 (.I(B), 
+                .O(XLXN_50));
+   INV  XLXI_51 (.I(A), 
+                .O(XLXN_51));
+   OR5  XLXI_52 (.I0(XLXN_73), 
+                .I1(XLXN_72), 
+                .I2(XLXN_71), 
+                .I3(XLXN_70), 
+                .I4(XLXN_69), 
+                .O(c_P35));
+   AND2  XLXI_53 (.I0(XLXN_75), 
+                 .I1(XLXN_74), 
+                 .O(XLXN_69));
+   AND2  XLXI_54 (.I0(A), 
+                 .I1(XLXN_76), 
+                 .O(XLXN_70));
+   AND2  XLXI_55 (.I0(A), 
+                 .I1(XLXN_77), 
+                 .O(XLXN_71));
+   AND2  XLXI_56 (.I0(C), 
+                 .I1(XLXN_78), 
+                 .O(XLXN_72));
+   AND2  XLXI_57 (.I0(XLXN_79), 
+                 .I1(D), 
+                 .O(XLXN_73));
+   INV  XLXI_58 (.I(D), 
+                .O(XLXN_74));
+   INV  XLXI_59 (.I(B), 
+                .O(XLXN_75));
+   INV  XLXI_60 (.I(D), 
+                .O(XLXN_76));
+   INV  XLXI_61 (.I(B), 
+                .O(XLXN_77));
+   INV  XLXI_62 (.I(D), 
+                .O(XLXN_78));
+   INV  XLXI_63 (.I(C), 
+                .O(XLXN_79));
+   OR5  XLXI_64 (.I0(XLXN_96), 
+                .I1(XLXN_95), 
+                .I2(XLXN_94), 
+                .I3(XLXN_93), 
+                .I4(XLXN_92), 
+                .O(d_P34));
+   AND2  XLXI_65 (.I0(XLXN_98), 
+                 .I1(XLXN_97), 
+                 .O(XLXN_92));
+   AND2  XLXI_66 (.I0(B), 
+                 .I1(XLXN_99), 
+                 .O(XLXN_93));
+   AND2  XLXI_67 (.I0(XLXN_100), 
+                 .I1(B), 
+                 .O(XLXN_94));
+   AND2  XLXI_68 (.I0(XLXN_102), 
+                 .I1(D), 
+                 .O(XLXN_96));
+   AND3  XLXI_69 (.I0(A), 
+                 .I1(XLXN_101), 
+                 .I2(C), 
+                 .O(XLXN_95));
+   INV  XLXI_70 (.I(C), 
+                .O(XLXN_97));
+   INV  XLXI_71 (.I(A), 
+                .O(XLXN_98));
+   INV  XLXI_72 (.I(C), 
+                .O(XLXN_99));
+   INV  XLXI_73 (.I(A), 
+                .O(XLXN_100));
+   INV  XLXI_74 (.I(B), 
+                .O(XLXN_101));
+   INV  XLXI_75 (.I(B), 
+                .O(XLXN_102));
+   OR4  XLXI_80 (.I0(XLXN_125), 
+                .I1(XLXN_123), 
+                .I2(XLXN_122), 
+                .I3(XLXN_121), 
+                .O(e_P32));
+   AND2  XLXI_81 (.I0(XLXN_127), 
+                 .I1(XLXN_126), 
+                 .O(XLXN_121));
+   AND2  XLXI_82 (.I0(XLXN_128), 
+                 .I1(B), 
+                 .O(XLXN_122));
+   AND2  XLXI_83 (.I0(B), 
+                 .I1(D), 
+                 .O(XLXN_123));
+   AND2  XLXI_84 (.I0(C), 
+                 .I1(D), 
+                 .O(XLXN_125));
+   INV  XLXI_85 (.I(C), 
+                .O(XLXN_126));
+   INV  XLXI_86 (.I(A), 
+                .O(XLXN_127));
+   INV  XLXI_87 (.I(A), 
+                .O(XLXN_128));
+   OR5  XLXI_88 (.I0(XLXN_142), 
+                .I1(XLXN_141), 
+                .I2(XLXN_140), 
+                .I3(XLXN_139), 
+                .I4(XLXN_138), 
+                .O(f_P29));
+   AND2  XLXI_89 (.I0(XLXN_144), 
+                 .I1(XLXN_143), 
+                 .O(XLXN_138));
+   AND2  XLXI_90 (.I0(XLXN_152), 
+                 .I1(C), 
+                 .O(XLXN_140));
+   AND3  XLXI_91 (.I0(XLXN_146), 
+                 .I1(C), 
+                 .I2(XLXN_151), 
+                 .O(XLXN_139));
+   AND3  XLXI_92 (.I0(A), 
+                 .I1(XLXN_153), 
+                 .I2(D), 
+                 .O(XLXN_141));
+   AND3  XLXI_93 (.I0(B), 
+                 .I1(C), 
+                 .I2(D), 
+                 .O(XLXN_142));
+   INV  XLXI_97 (.I(B), 
+                .O(XLXN_143));
+   INV  XLXI_98 (.I(A), 
+                .O(XLXN_144));
+   INV  XLXI_99 (.I(B), 
+                .O(XLXN_146));
+   INV  XLXI_108 (.I(D), 
+                 .O(XLXN_151));
+   INV  XLXI_109 (.I(A), 
+                 .O(XLXN_152));
+   INV  XLXI_110 (.I(C), 
+                 .O(XLXN_153));
+   OR5  XLXI_116 (.I0(XLXN_175), 
+                 .I1(XLXN_174), 
+                 .I2(XLXN_173), 
+                 .I3(XLXN_172), 
+                 .I4(XLXN_171), 
+                 .O(g_P27));
+   AND2  XLXI_117 (.I0(B), 
+                  .I1(XLXN_176), 
+                  .O(XLXN_171));
+   AND2  XLXI_118 (.I0(XLXN_177), 
+                  .I1(B), 
+                  .O(XLXN_172));
+   AND2  XLXI_119 (.I0(XLXN_180), 
+                  .I1(D), 
+                  .O(XLXN_174));
+   AND2  XLXI_120 (.I0(A), 
+                  .I1(D), 
+                  .O(XLXN_175));
+   AND3  XLXI_121 (.I0(XLXN_179), 
+                  .I1(C), 
+                  .I2(XLXN_178), 
+                  .O(XLXN_173));
+   INV  XLXI_122 (.I(C), 
+                 .O(XLXN_176));
+   INV  XLXI_123 (.I(A), 
+                 .O(XLXN_177));
+   INV  XLXI_124 (.I(D), 
+                 .O(XLXN_178));
+   INV  XLXI_125 (.I(B), 
+                 .O(XLXN_179));
+   INV  XLXI_126 (.I(C), 
+                 .O(XLXN_180));
+endmodule
+`timescale 1ns / 1ps
+
+module mux8to4_MUSER_lab8Adder(a0, 
+                               a1, 
+                               b0, 
+                               b1, 
+                               c0, 
+                               c1, 
+                               d0, 
+                               d1, 
+                               GND, 
+                               S, 
+                               A, 
+                               B, 
+                               C, 
+                               D);
+
+    input a0;
+    input a1;
+    input b0;
+    input b1;
+    input c0;
+    input c1;
+    input d0;
+    input d1;
+    input GND;
+    input S;
+   output A;
+   output B;
+   output C;
+   output D;
+   
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_15;
+   wire XLXN_28;
+   wire XLXN_29;
+   
+   OR2  XLXI_14 (.I0(XLXN_3), 
+                .I1(XLXN_2), 
+                .O(A));
+   OR2  XLXI_15 (.I0(XLXN_5), 
+                .I1(XLXN_4), 
+                .O(B));
+   OR2  XLXI_16 (.I0(XLXN_7), 
+                .I1(XLXN_6), 
+                .O(C));
+   OR2  XLXI_17 (.I0(XLXN_9), 
+                .I1(XLXN_8), 
+                .O(D));
+   AND3  XLXI_18 (.I0(XLXN_28), 
+                 .I1(XLXN_15), 
+                 .I2(a0), 
+                 .O(XLXN_2));
+   AND3  XLXI_19 (.I0(XLXN_29), 
+                 .I1(XLXN_15), 
+                 .I2(a1), 
+                 .O(XLXN_3));
+   AND3  XLXI_20 (.I0(XLXN_28), 
+                 .I1(XLXN_15), 
+                 .I2(b0), 
+                 .O(XLXN_4));
+   AND3  XLXI_21 (.I0(XLXN_29), 
+                 .I1(XLXN_15), 
+                 .I2(b1), 
+                 .O(XLXN_5));
+   AND3  XLXI_22 (.I0(XLXN_28), 
+                 .I1(XLXN_15), 
+                 .I2(c0), 
+                 .O(XLXN_6));
+   AND3  XLXI_23 (.I0(XLXN_29), 
+                 .I1(XLXN_15), 
+                 .I2(c1), 
+                 .O(XLXN_7));
+   AND3  XLXI_24 (.I0(XLXN_28), 
+                 .I1(XLXN_15), 
+                 .I2(d0), 
+                 .O(XLXN_8));
+   AND3  XLXI_25 (.I0(XLXN_29), 
+                 .I1(XLXN_15), 
+                 .I2(d1), 
+                 .O(XLXN_9));
+   INV  XLXI_26 (.I(GND), 
+                .O(XLXN_15));
+   INV  XLXI_27 (.I(S), 
+                .O(XLXN_28));
+   INV  XLXI_28 (.I(XLXN_28), 
+                .O(XLXN_29));
+endmodule
+`timescale 1ns / 1ps
+
+module MUX4_1_MUSER_lab8Adder(CO0, 
+                              Sel1, 
+                              Sel2, 
+                              S0, 
+                              S1, 
+                              S2, 
+                              S3, 
+                              S4, 
+                              S5, 
+                              S6, 
+                              S7, 
+                              A, 
+                              B, 
+                              C, 
+                              D);
+
+    input CO0;
+    input Sel1;
+    input Sel2;
+    input S0;
+    input S1;
+    input S2;
+    input S3;
+    input S4;
+    input S5;
+    input S6;
+    input S7;
+   output A;
+   output B;
+   output C;
+   output D;
+   
+   wire CO;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_47;
+   wire XLXN_48;
+   wire XLXN_49;
+   wire XLXN_50;
+   wire XLXN_51;
+   wire XLXN_52;
+   
+   mux8to4_MUSER_lab8Adder  XLXI_1 (.a0(S0), 
+                                   .a1(S4), 
+                                   .b0(S1), 
+                                   .b1(S5), 
+                                   .c0(S2), 
+                                   .c1(S6), 
+                                   .d0(S3), 
+                                   .d1(S7), 
+                                   .GND(XLXN_2), 
+                                   .S(Sel1), 
+                                   .A(XLXN_9), 
+                                   .B(XLXN_10), 
+                                   .C(XLXN_8), 
+                                   .D(XLXN_7));
+   mux8to4_MUSER_lab8Adder  XLXI_2 (.a0(CO0), 
+                                   .a1(XLXN_47), 
+                                   .b0(XLXN_48), 
+                                   .b1(XLXN_49), 
+                                   .c0(XLXN_52), 
+                                   .c1(XLXN_50), 
+                                   .d0(CO), 
+                                   .d1(XLXN_51), 
+                                   .GND(XLXN_3), 
+                                   .S(Sel1), 
+                                   .A(XLXN_13), 
+                                   .B(XLXN_14), 
+                                   .C(XLXN_12), 
+                                   .D(XLXN_11));
+   mux8to4_MUSER_lab8Adder  XLXI_3 (.a0(XLXN_9), 
+                                   .a1(XLXN_13), 
+                                   .b0(XLXN_10), 
+                                   .b1(XLXN_14), 
+                                   .c0(XLXN_8), 
+                                   .c1(XLXN_12), 
+                                   .d0(XLXN_7), 
+                                   .d1(XLXN_11), 
+                                   .GND(XLXN_4), 
+                                   .S(Sel2), 
+                                   .A(A), 
+                                   .B(B), 
+                                   .C(C), 
+                                   .D(D));
+   GND  XLXI_4 (.G(XLXN_2));
+   GND  XLXI_5 (.G(XLXN_4));
+   GND  XLXI_6 (.G(XLXN_3));
+   GND  XLXI_9 (.G(CO));
+   GND  XLXI_10 (.G(XLXN_47));
+   GND  XLXI_11 (.G(XLXN_48));
+   GND  XLXI_12 (.G(XLXN_49));
+   GND  XLXI_14 (.G(XLXN_50));
+   GND  XLXI_15 (.G(XLXN_51));
+   GND  XLXI_16 (.G(XLXN_52));
+endmodule
+`timescale 1ns / 1ps
+
+module lab8Adder(DIP1_P112, 
+                 DIP2_P111, 
+                 DIP3_P105, 
+                 DIP4_P104, 
+                 DIP5_P102, 
+                 DIP6_P101, 
+                 DIP7_P100, 
+                 DIP8_P99, 
+                 OSC_P123, 
+                 SW0_P66, 
+                 SW1_P62, 
+                 SW2_P61, 
+                 SW3_P59, 
+                 SW4_P58, 
+                 SW5_P57, 
+                 SW6_P56, 
+                 SW7_P55, 
+                 a_P41, 
+                 BUZZER_P83, 
+                 b_P40, 
+                 CM0_P44, 
+                 CM1_P43, 
+                 CM2_P33, 
+                 CM3_P30, 
+                 c_P35, 
+                 d_P34, 
+                 e__P32, 
+                 f_P29, 
+                 g_P27);
+
+    input DIP1_P112;
+    input DIP2_P111;
+    input DIP3_P105;
+    input DIP4_P104;
+    input DIP5_P102;
+    input DIP6_P101;
+    input DIP7_P100;
+    input DIP8_P99;
+    input OSC_P123;
+    input SW0_P66;
+    input SW1_P62;
+    input SW2_P61;
+    input SW3_P59;
+    input SW4_P58;
+    input SW5_P57;
+    input SW6_P56;
+    input SW7_P55;
+   output a_P41;
+   output BUZZER_P83;
+   output b_P40;
+   output CM0_P44;
+   output CM1_P43;
+   output CM2_P33;
+   output CM3_P30;
+   output c_P35;
+   output d_P34;
+   output e__P32;
+   output f_P29;
+   output g_P27;
+   
+   wire XLXN_1;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_20;
+   wire XLXN_21;
+   wire XLXN_22;
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_25;
+   wire XLXN_26;
+   wire XLXN_27;
+   wire XLXN_28;
+   wire XLXN_29;
+   wire XLXN_30;
+   wire XLXN_89;
+   wire XLXN_90;
+   wire XLXN_92;
+   wire XLXN_94;
+   wire XLXN_100;
+   wire XLXN_101;
+   wire XLXN_102;
+   wire XLXN_106;
+   
+   (* HU_SET = "XLXI_1_4" *) 
+   ADD4_HXILINX_lab8Adder  XLXI_1 (.A0(SW0_P66), 
+                                  .A1(SW1_P62), 
+                                  .A2(SW2_P61), 
+                                  .A3(SW3_P59), 
+                                  .B0(DIP8_P99), 
+                                  .B1(DIP7_P100), 
+                                  .B2(DIP6_P101), 
+                                  .B3(DIP5_P102), 
+                                  .CI(), 
+                                  .CO(XLXN_1), 
+                                  .OFL(), 
+                                  .S0(XLXN_18), 
+                                  .S1(XLXN_19), 
+                                  .S2(XLXN_20), 
+                                  .S3(XLXN_21));
+   (* HU_SET = "XLXI_2_3" *) 
+   ADD4_HXILINX_lab8Adder  XLXI_2 (.A0(SW4_P58), 
+                                  .A1(SW5_P57), 
+                                  .A2(SW6_P56), 
+                                  .A3(SW7_P55), 
+                                  .B0(DIP4_P104), 
+                                  .B1(DIP3_P105), 
+                                  .B2(DIP2_P111), 
+                                  .B3(DIP1_P112), 
+                                  .CI(XLXN_1), 
+                                  .CO(XLXN_26), 
+                                  .OFL(), 
+                                  .S0(XLXN_22), 
+                                  .S1(XLXN_23), 
+                                  .S2(XLXN_24), 
+                                  .S3(XLXN_25));
+   MUX4_1_MUSER_lab8Adder  XLXI_3 (.CO0(XLXN_26), 
+                                  .Sel1(XLXN_89), 
+                                  .Sel2(XLXN_90), 
+                                  .S0(XLXN_18), 
+                                  .S1(XLXN_19), 
+                                  .S2(XLXN_20), 
+                                  .S3(XLXN_21), 
+                                  .S4(XLXN_22), 
+                                  .S5(XLXN_23), 
+                                  .S6(XLXN_24), 
+                                  .S7(XLXN_25), 
+                                  .A(XLXN_27), 
+                                  .B(XLXN_30), 
+                                  .C(XLXN_29), 
+                                  .D(XLXN_28));
+   segment_MUSER_lab8Adder  XLXI_4 (.A(XLXN_27), 
+                                   .B(XLXN_30), 
+                                   .C(XLXN_29), 
+                                   .D(XLXN_28), 
+                                   .a_P41(a_P41), 
+                                   .b_P40(b_P40), 
+                                   .c_P35(c_P35), 
+                                   .d_P34(d_P34), 
+                                   .e_P32(e__P32), 
+                                   .f_P29(f_P29), 
+                                   .g_P27(g_P27));
+   (* HU_SET = "XLXI_6_2" *) 
+   CB2CE_HXILINX_lab8Adder  XLXI_6 (.C(OSC_P123), 
+                                   .CE(XLXN_94), 
+                                   .CLR(XLXN_92), 
+                                   .CEO(), 
+                                   .Q0(XLXN_89), 
+                                   .Q1(XLXN_90), 
+                                   .TC());
+   GND  XLXI_13 (.G(XLXN_92));
+   VCC  XLXI_14 (.P(XLXN_94));
+   (* HU_SET = "XLXI_15_5" *) 
+   D2_4E_HXILINX_lab8Adder  XLXI_15 (.A0(XLXN_89), 
+                                    .A1(XLXN_90), 
+                                    .E(XLXN_106), 
+                                    .D0(XLXN_100), 
+                                    .D1(XLXN_101), 
+                                    .D2(XLXN_102), 
+                                    .D3());
+   INV  XLXI_16 (.I(XLXN_100), 
+                .O(CM0_P44));
+   INV  XLXI_17 (.I(XLXN_101), 
+                .O(CM1_P43));
+   INV  XLXI_18 (.I(XLXN_102), 
+                .O(CM2_P33));
+   VCC  XLXI_19 (.P(XLXN_106));
+   VCC  XLXI_20 (.P(CM3_P30));
+   (* HU_SET = "XLXI_22_6" *) 
+   NOR9_HXILINX_lab8Adder  XLXI_22 (.I0(XLXN_26), 
+                                   .I1(XLXN_25), 
+                                   .I2(XLXN_24), 
+                                   .I3(XLXN_23), 
+                                   .I4(XLXN_22), 
+                                   .I5(XLXN_21), 
+                                   .I6(XLXN_20), 
+                                   .I7(XLXN_19), 
+                                   .I8(XLXN_18), 
+                                   .O(BUZZER_P83));
+endmodule

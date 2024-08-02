@@ -1,0 +1,44 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Common.vf
+// /___/   /\     Timestamp : 10/19/2022 23:44:53
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/Users/nicha/Downloads/digital_lab/Lab7_10/Common.vf -w C:/Users/nicha/Downloads/digital_lab/Lab7_10/Common.sch
+//Design Name: Common
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Common(Inn, 
+              Common);
+
+    input [3:0] Inn;
+   output [3:0] Common;
+   
+   wire XLXN_5;
+   
+   OR2  XLXI_1 (.I0(XLXN_5), 
+               .I1(Inn[0]), 
+               .O(Common[0]));
+   OR2  XLXI_2 (.I0(XLXN_5), 
+               .I1(Inn[1]), 
+               .O(Common[1]));
+   OR2  XLXI_3 (.I0(XLXN_5), 
+               .I1(Inn[2]), 
+               .O(Common[2]));
+   OR2  XLXI_4 (.I0(XLXN_5), 
+               .I1(Inn[3]), 
+               .O(Common[3]));
+   GND  XLXI_5 (.G(XLXN_5));
+endmodule

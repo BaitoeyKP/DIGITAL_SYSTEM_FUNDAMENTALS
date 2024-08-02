@@ -1,0 +1,2 @@
+sch2hdl -intstyle ise -family spartan6 -verilog Counter0_9NEW_drc.vf -w C:/Users/Thongthana/Documents/XilinxWorkSpace/Lab7_10/Counter0_9NEW.sch 
+sch2sym -intstyle ise -family spartan6 -refsym Counter0_9NEW C:/Users/Thongthana/Documents/XilinxWorkSpace/Lab7_10/Counter0_9NEW.sch C:/Users/Thongthana/Documents/XilinxWorkSpace/Lab7_10/Counter0_9NEW.sym 

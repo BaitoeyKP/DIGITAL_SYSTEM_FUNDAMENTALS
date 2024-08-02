@@ -1,0 +1,165 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Divisor_20M.vf
+// /___/   /\     Timestamp : 11/01/2022 22:28:32
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/lab7_new/Divisor_20M.vf -w E:/lab7_new/Divisor_20M.sch
+//Design Name: Divisor_20M
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_Divisor_20M(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module div10_MUSER_Divisor_20M(clockin, 
+                               CLR, 
+                               XLXN_30);
+
+    input clockin;
+    input CLR;
+   output XLXN_30;
+   
+   wire clockout;
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_30_DUMMY;
+   
+   assign XLXN_30 = XLXN_30_DUMMY;
+   (* HU_SET = "XLXI_1_30" *) 
+   FJKC_HXILINX_Divisor_20M  XLXI_1 (.C(clockin), 
+                                    .CLR(clockout), 
+                                    .J(XLXN_6), 
+                                    .K(XLXN_6), 
+                                    .Q(XLXN_7));
+   AND2  XLXI_2 (.I0(XLXN_10), 
+                .I1(XLXN_5), 
+                .O(XLXN_30_DUMMY));
+   AND2  XLXI_3 (.I0(XLXN_2), 
+                .I1(XLXN_5), 
+                .O(XLXN_6));
+   (* HU_SET = "XLXI_4_31" *) 
+   FJKC_HXILINX_Divisor_20M  XLXI_4 (.C(clockin), 
+                                    .CLR(clockout), 
+                                    .J(XLXN_9), 
+                                    .K(XLXN_9), 
+                                    .Q(XLXN_10));
+   AND3  XLXI_5 (.I0(XLXN_7), 
+                .I1(XLXN_5), 
+                .I2(XLXN_2), 
+                .O(XLXN_9));
+   (* HU_SET = "XLXI_6_32" *) 
+   FJKC_HXILINX_Divisor_20M  XLXI_6 (.C(clockin), 
+                                    .CLR(clockout), 
+                                    .J(XLXN_1), 
+                                    .K(XLXN_1), 
+                                    .Q(XLXN_2));
+   (* HU_SET = "XLXI_8_33" *) 
+   FJKC_HXILINX_Divisor_20M  XLXI_8 (.C(clockin), 
+                                    .CLR(clockout), 
+                                    .J(XLXN_2), 
+                                    .K(XLXN_2), 
+                                    .Q(XLXN_5));
+   VCC  XLXI_10 (.P(XLXN_1));
+   OR2  XLXI_11 (.I0(CLR), 
+                .I1(XLXN_30_DUMMY), 
+                .O(clockout));
+endmodule
+`timescale 1ns / 1ps
+
+module Divisor_20M(CLR, 
+                   OSC_20MHz, 
+                   CLK_1Hz);
+
+    input CLR;
+    input OSC_20MHz;
+   output CLK_1Hz;
+   
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_15;
+   
+   div10_MUSER_Divisor_20M  XLXI_8 (.clockin(OSC_20MHz), 
+                                   .CLR(CLR), 
+                                   .XLXN_30(XLXN_7));
+   div10_MUSER_Divisor_20M  XLXI_9 (.clockin(XLXN_7), 
+                                   .CLR(CLR), 
+                                   .XLXN_30(XLXN_8));
+   div10_MUSER_Divisor_20M  XLXI_10 (.clockin(XLXN_8), 
+                                    .CLR(CLR), 
+                                    .XLXN_30(XLXN_9));
+   div10_MUSER_Divisor_20M  XLXI_11 (.clockin(XLXN_9), 
+                                    .CLR(CLR), 
+                                    .XLXN_30(XLXN_10));
+   div10_MUSER_Divisor_20M  XLXI_12 (.clockin(XLXN_10), 
+                                    .CLR(CLR), 
+                                    .XLXN_30(XLXN_11));
+   div10_MUSER_Divisor_20M  XLXI_13 (.clockin(XLXN_11), 
+                                    .CLR(CLR), 
+                                    .XLXN_30(XLXN_12));
+   div10_MUSER_Divisor_20M  XLXI_14 (.clockin(XLXN_12), 
+                                    .CLR(CLR), 
+                                    .XLXN_30(XLXN_13));
+   (* HU_SET = "XLXI_15_34" *) 
+   FJKC_HXILINX_Divisor_20M  XLXI_15 (.C(XLXN_13), 
+                                     .CLR(CLR), 
+                                     .J(XLXN_15), 
+                                     .K(XLXN_15), 
+                                     .Q(CLK_1Hz));
+   VCC  XLXI_16 (.P(XLXN_15));
+endmodule

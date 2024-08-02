@@ -1,0 +1,75 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml JK.twx JK.ncd -o JK.twr JK.pcf -ucf JKpin.ucf -ucf JK.ucf
+
+Design file:              JK.ncd
+Physical constraint file: JK.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock CLK_PB4_P51 to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+a_P41       |         8.955(R)|      SLOW  |         4.973(R)|      FAST  |clk_P45           |   0.000|
+b_P40       |         8.850(R)|      SLOW  |         5.035(R)|      FAST  |clk_P45           |   0.000|
+c_P35       |         8.688(R)|      SLOW  |         4.949(R)|      FAST  |clk_P45           |   0.000|
+d_P34       |         8.754(R)|      SLOW  |         4.944(R)|      FAST  |clk_P45           |   0.000|
+e_P32       |         8.546(R)|      SLOW  |         4.788(R)|      FAST  |clk_P45           |   0.000|
+f_P29       |         9.128(R)|      SLOW  |         5.164(R)|      FAST  |clk_P45           |   0.000|
+g_P27       |         9.478(R)|      SLOW  |         5.380(R)|      FAST  |clk_P45           |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK_PB4_P51
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_PB4_P51    |    1.335|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXN_215
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXN_215       |    1.933|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Mon Oct 03 15:08:25 2022 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4571 MB
+
+
+

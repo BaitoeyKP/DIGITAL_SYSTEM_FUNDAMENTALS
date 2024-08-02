@@ -1,0 +1,9 @@
+MODULE Time_Counter
+	SUBMODULE Counter0_5
+		INSTANCE XLXI_1
+	SUBMODULE counter0_9_0tctest
+		INSTANCE XLXI_2
+	SUBMODULE counter0_9_0tctest
+		INSTANCE XLXI_3
+	SUBMODULE counter0_9_0tctest
+		INSTANCE XLXI_4

@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Mon Sep 12 09:49:22 2022
+# Process ID: 10900
+# Log file: E:/Lab4/planAhead_run_1/planAhead.log
+# Journal file: E:/Lab4/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source E:/Lab4/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P61 [get_ports B_SW2_P61]
+endgroup
+startgroup
+set_property package_pin P83 [get_ports Buzzer_P83]
+endgroup
+startgroup
+set_property package_pin P62 [get_ports D_SW1_P62]
+endgroup
+startgroup
+set_property package_pin P66 [get_ports E_SW0_P66]
+endgroup
+startgroup
+set_property package_pin P58 [get_ports H_SW4_P58]
+endgroup
+startgroup
+set_property package_pin P59 [get_ports S_SW3_P59]
+endgroup
+save_constraints
